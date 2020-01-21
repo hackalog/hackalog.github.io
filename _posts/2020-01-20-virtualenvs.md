@@ -1,4 +1,14 @@
-# Great Myths of the Python Environment Managers, part I
+---
+layout: post
+title:   Great Myths of the Python Environment Managers, part I
+categories: [Python, reproducibility]
+excerpt: As with everything in open source land, there's a lot of fighting that
+goes on about just which virtual environment manager is the right one
+to use. While not myths exactly, I'm going to bust a few of these opinions, or
+at least try to convince you that while it may be a perfectly good
+solution for your use case, that doesn't mean it solves **my**
+(or my customers') problems.
+---
 
 I spend a lot of time doing Python development, and in the process, I
 make pretty heavy use of virtual environments. If you've spent any
@@ -21,6 +31,7 @@ to use.
 
 I hear a lot of opinons in this space, stated as facts. Like the mantra
 [Strong opinions, loosely held][SOLH], except without the second part.
+{% include pullquote.html quote="Like the mantra 'strong opinions, loosely held', except without the second part." %}
 
 While not myths exactly, I'm going to bust a few of these opinions, or
 at least try to convince you that while it may be a perfectly good
