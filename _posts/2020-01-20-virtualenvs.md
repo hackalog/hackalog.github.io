@@ -1,13 +1,9 @@
 ---
 layout: post
 title: Great Myths of the Python Environment Managers, part I
+date: 2020-01-20
 categories: [Python, reproducibility]
-excerpt: As with everything in open source land, there's a lot of fighting that
-goes on about just which virtual environment manager is the right one
-to use. While not myths exactly, I'm going to bust a few of these opinions, or
-at least try to convince you that while it may be a perfectly good
-solution for your use case, that doesn't mean it solves my
-(or my customers') problems.
+excerpt: In open source land, there's a lot of fighting that goes on about just which virtual environment manager is the right one to use. While not myths exactly, I'm going to bust a few of these opinions, or at least try to convince you that while it may be a perfectly good solution for your use case, that doesn't mean it solves my (or my customers') problems.
 ---
 
 I spend a lot of time doing Python development, and in the process, I
