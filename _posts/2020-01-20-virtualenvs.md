@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Great Myths of the Python Environment Managers, part I
+title: Great Myths of the Python Environment Managers
 date: 2020-01-20
 categories: [Python, reproducibility]
 excerpt: In open source land, there's a lot of fighting that goes on about just which virtual environment manager is the right one to use. While not myths exactly, I'm going to bust a few of these opinions, or at least try to convince you that while it may be a perfectly good solution for your use case, that doesn't mean it solves my (or my customers') problems.
@@ -21,13 +21,13 @@ trying to use, you might prefer:
 * [pip-tools]
 * [pyenv]
 
+{% include pullquote.html quote="Like the mantra 'strong opinions, loosely held', except without the second part." %}
 As with everything in open source land, there's a lot of fighting that
 goes on about just which virtual environment manager is the right one
 to use.
 
 I hear a lot of opinons in this space, stated as facts. Like the mantra
 [Strong opinions, loosely held][SOLH], except without the second part.
-{% include pullquote.html quote="Like the mantra 'strong opinions, loosely held', except without the second part." %}
 
 While not myths exactly, I'm going to bust a few of these opinions, or
 at least try to convince you that while it may be a perfectly good
@@ -50,7 +50,7 @@ the complete set of resolved dependencies (`Pipfile.lock`). Then
 again, just about every tool than `pip` does this.
 
 Also, I'd be remiss not to point out that the pipenv project appears
-to be in quite a [bit fo flux][hm-if-its-dead].  To borrow a cheesy
+to be in quite a [bit of flux][hn-if-its-dead].  To borrow a cheesy
 movie line, it's not dead, but it's pretty badly hurt.
 
 
