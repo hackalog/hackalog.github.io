@@ -138,6 +138,7 @@ say:
 [marmelab]: http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 [cookiecutter-datascience]: https://drivendata.github.io/cookiecutter-data-science/
 [cookiecutter-easydata]: https://github.com/hackalog/cookiecutter-easydata
+[bus_number]: https://github.com/hackalog/bus_number
 [all-purpose]: https://blog.mindlessness.life/2019/11/17/the-language-agnostic-all-purpose-incredible-makefile.html "The Language Agnostic, All Purpose, Incredible Makefile"
 [opinionated-makefiles]: https://tech.davis-hansson.com/p/make/ "An opinionated approach to (GNU) make"
 
