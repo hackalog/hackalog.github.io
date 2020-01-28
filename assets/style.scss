@@ -373,13 +373,26 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    /*border-left: 2px solid $gray;*/
+    border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
     font-size: 22px;
     font-style: italic;
-    background-color: #ede1ff;
+    background-color: #f9f9f9;
+    quotes: "\201C""\201D""\2018""\2019";
   }
+
+  blockquote:before {
+      color: $gray;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+  }
+  blockquote p {
+      display: inline;
+  }  
 
   .you-may-like{
     margin: 1.8em .8em;
