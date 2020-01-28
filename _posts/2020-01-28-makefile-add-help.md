@@ -132,8 +132,8 @@ Want some other takes on using makefiles effectively? We don't
 necessary agree, but we're thinking about what the authors have to
 say:
 
-* [all-purpose]
-* [opinionated-makefiles]
+* [The Language Agnostic, All Purpose, Incredible Makefile][all-purpose]
+* [An opinionated approach to (GNU) make][opinionated-makefiles]
 
 [marmelab]: http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 [cookiecutter-datascience]: https://drivendata.github.io/cookiecutter-data-science/
