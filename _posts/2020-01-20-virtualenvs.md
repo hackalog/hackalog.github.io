@@ -2,7 +2,7 @@
 layout: post
 title: Great Myths of the Python Environment Managers
 date: 2020-01-20
-categories: [Python, reproducibility]
+categories: [python, reproducibility]
 excerpt: In open source land, there's a lot of fighting that goes on about just which virtual environment manager is the right one to use. While not myths exactly, I'm going to bust a few of these opinions, or at least try to convince you that while it may be a perfectly good solution for your use case, that doesn't mean it solves my (or my customers') problems.
 ---
 
@@ -29,10 +29,10 @@ to use.
 I hear a lot of opinons in this space, stated as facts. Like the mantra
 [Strong opinions, loosely held][SOLH], except without the second part.
 
-While not myths exactly, I'm going to bust a few of these opinions, or
-at least try to convince you that while it may be a perfectly good
-solution for your use case, that doesn't mean it solves **my**
-(or my customers') problems.
+While not myths exactly, I'm going to bust a few of these
+opinions. They may be a perfectly good solution for *your* use case,
+but that doesn't mean it solves *my* problems, or those of my
+customers.
 
 
 ### Pipenv the officially recommended Python packaging tool from Python.org
@@ -115,4 +115,6 @@ So take your pick. `requirements.txt`, `setup.cfg`, `MANIFEST.in`,
 [pipenv]: https://github.com/pypa/pipenv
 [pep 518]: https://www.python.org/dev/peps/pep-0518/
 [solh]: https://blog.glowforge.com/strong-opinions-loosely-held-might-be-the-worst-idea-in-tech/
+[tanenbaum-quotes]: https://en.wikiquote.org/wiki/Andrew_S._Tanenbaum
+
 *[HDD]: Hard Disk Drive
