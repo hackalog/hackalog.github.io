@@ -126,6 +126,13 @@ That's the magic. Cut and paste this snippet. Use it everywhere you
 can. Or even better, check out [cookiecutter-easydata], and just use
 that for all your reproducible data science needs.
 
+### More Reading
+Want some other takes on using makefiles effectively? We don't necessary agree, but we're thinking about what the authors have to say:
+* [all-purpose]
+* [opinionated-makefiles]
+
+[all-purpose] https://blog.mindlessness.life/2019/11/17/the-language-agnostic-all-purpose-incredible-makefile.html "The Language Agnostic, All Purpose, Incredible Makefile"
+[opinionated-makefiles]: https://tech.davis-hansson.com/p/make/ "An opinionated approach to (GNU) make"
 [marmelab]: http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 [cookiecutter-datascience]: https://drivendata.github.io/cookiecutter-data-science/
 [cookiecutter-easydata]: https://github.com/hackalog/cookiecutter-easydata
