@@ -1,5 +1,10 @@
-
-## The Self-Documenting Makefile
+---
+layout: post
+title: The Self-Documenting Makefile
+date: 2020-01-28
+categories: [reproducibility, makefiles, easydata]
+excerpt: How to include a self-documenting `show-help` target in every `Makefile` you create.
+---
 
 **TL;DR** : _Include a self-documenting `show-help`
 target in every `Makefile` you create, and make it your default rule._
