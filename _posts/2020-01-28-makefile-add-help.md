@@ -128,4 +128,5 @@ that for all your reproducible data science needs.
 
 [marmelab]: http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 [cookiecutter-datascience]: https://drivendata.github.io/cookiecutter-data-science/
+[cookiecutter-easydata]: https://github.com/hackalog/cookiecutter-easydata
 
