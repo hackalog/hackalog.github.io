@@ -3,14 +3,14 @@ layout: post
 title: The Self-Documenting Makefile
 date: 2020-01-28
 categories: [reproducibility, makefiles, easydata]
-excerpt: How to include a self-documenting `show-help` target in every `Makefile` you create.
+excerpt: How to include a self-documenting `show-help` target in every `Makefile` you create, and make it your default rule.
 ---
 
-**TL;DR** : _Include a self-documenting `show-help`
+**TL;DR** : _How to include a self-documenting `show-help`
 target in every `Makefile` you create, and make it your default rule._
 
 Here's a trick that we borrowed from [cookiecutter-datascience] (who
-borrowed it from [marmelab-blog]). It's such a good one that it has
+borrowed it from [Marmelab]). It's such a good one that it has
 become a fixture in every `Makefile` we create:
 
 The default rule (the one invoked if you just type `make`) is
@@ -99,8 +99,8 @@ Here's that `sed` script explained
 ~~~
 
 In practice, we've added a little more to that message, including some
-instructions for creating the environment, and a the list of makefile
-variables that you specify in the ``HELP_VARS` list.
+instructions for creating the environment, and a the list of `Makefile`
+variables that you specify in the `HELP_VARS` list.
 
 ~~~
 .DEFAULT_GOAL := show-help
@@ -122,6 +122,10 @@ show-help: help-prefix $(addprefix print-, $(HELP_VARS))
 	...
 ~~~
 
-[marmelab-blog]: http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
+That's the magic. Cut and paste this snippet. Use it everywhere you
+can. Or even better, check out [cookiecutter-easydata], and just use
+that for all your reproducible data science needs.
+
+[marmelab]: http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 [cookiecutter-datascience]: https://drivendata.github.io/cookiecutter-data-science/
 
