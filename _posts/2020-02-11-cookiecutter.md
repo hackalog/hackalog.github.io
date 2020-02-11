@@ -1,8 +1,9 @@
 ---
 layout: post
+title: The Fork Not Taken
 ---
 
-**TL;DR** The cookiecutter project is facing a fork. Their problems boil down to a clash between models: gift culture, and capitalism.
+**TL;DR**: The cookiecutter project is facing a fork. Their problems boil down to a clash between economies: gift culture, and capitalism.
 
 
 ### The Problem with Progress
@@ -114,7 +115,7 @@ compatible.
 
 So what's the right road to take? How do we fix the ever rising tide
 of support requests, and burned out open source maintainers? How do we
-merge the cultures of capitalism and the gift culture? 
+merge the cultures of capitalism and the gift culture?
 
 I'm not sure we do. In fact, I think we have to pick.
 
@@ -129,4 +130,3 @@ I don't know. I'd start with this:
 Don't be dickish. Treat people well. Fork if you have to, but be
 prepared to fold that fork back upstream if the opportunity
 arises. Pay for what you take. Nobody *owes* you anything.
-
