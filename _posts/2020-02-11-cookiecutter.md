@@ -20,6 +20,7 @@ I expect, a huge boon for a number of other projects, too, as it would
 allow for much more succint and relevant questions when configuring a
 new project.
 
+[cookiecutter]: https://github.com/cookiecutter/
 [cookiecutter2]: https://github.com/cookiecutter/cookiecutter/pull/848
 
 Though I've long been keeping my own list of desirable cookiecutter
@@ -30,6 +31,8 @@ they would be monkey-patching new features into cookiecutter and
 shipping their own (forked) version of cookiecutter called [ccds].
 
 [ccds]: https://github.com/drivendata/cookiecutter-data-science/pull/162
+[cookiecutter-data-science]: https://github.com/drivendata/cookiecutter-data-science/pull/162
+[easydata framework]: https://github.com/hackalog/cookiecutter-easydatadrivendata/cookiecutter-data-science/pull/162
 
 This was a big shift, so I headed upstream to see why they were
 proposing a fork instead of simply merging the changes upstream.
