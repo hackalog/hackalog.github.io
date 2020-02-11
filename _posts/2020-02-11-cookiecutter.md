@@ -6,10 +6,9 @@ categories: [reproducibility, cookiecutter, easydata]
 excerpt: The cookiecutter project is facing a fork. Their problems boil down to a clash between models: gift culture, and capitalism.
 ---
 
+*TL;DR* The cookiecutter project is facing a fork. Their problems boil down to a clash between models: gift culture, and capitalism.
 
-*TL;DR *The cookiecutter project is facing a fork. Their problems boil down to a clash between models: gift culture, and capitalism.
-
-## The Problem with Progress
+### The Problem with Progress
 
 We make heavy use of [cookiecutter] in the [EasyData framework]. It's
 a great way to get a new project up and running quickly, and
@@ -57,7 +56,7 @@ take it on.
 
 And they're almost certainly right. So where does that leave us as users?
 
-## Darwin and the Fork
+### Darwin and the Fork
 
 It could be argued that there is a mechanism within the open source
 world for solving this problem: **the fork**. If a given problem matters
@@ -89,7 +88,7 @@ Totally legit in Open Source. Also, totally dickish. Feelings get
 hurt, and that matters.
 
 
-## Capitalism vs the Gift Culture
+### Capitalism vs the Gift Culture
 
 I think what we have here is a clash of cultures.
 
