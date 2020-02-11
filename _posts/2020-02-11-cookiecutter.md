@@ -6,6 +6,8 @@ categories: [reproducibility, cookiecutter]
 excerpt: The cookiecutter project is facing a fork. Their problems boil down to a clash between models: gift culture, and capitalism
 ---
 
+# Cookiecutter, and the Fork Not Taken
+
 ## The Problem with Progress
 
 We make heavy use of [cookiecutter] in the [EasyData framework]. It's
