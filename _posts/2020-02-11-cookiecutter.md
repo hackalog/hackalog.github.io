@@ -184,6 +184,6 @@ the poem, [it doesn't really matter which][frost-poem]. What matters is that you
 into whatever model fits you the best. All the way in.
 
 > Two roads diverged in a yellow wood, \\
-> And sorry I could not travel both
+> And sorry I could not travel both...
 
-Wise, Robert. Very wise.
+Sing it, Robert Frost. Sing it.
