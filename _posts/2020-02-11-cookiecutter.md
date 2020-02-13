@@ -1,16 +1,12 @@
 ---
 layout: post
-title: Cookiecutter, and the Fork Not Taken
+title: The Fork Not Taken
 date: 2020-02-11
 categories: [reproducibility, cookiecutter, easydata]
-excerpt: "The cookiecutter project is facing a fork. Their problems boil down to a clash between economies: gift culture, and capitalism."
+excerpt: "The cookiecutter project is facing a fork, and their problem is one found throughout the Open Source world. It's a clash between economies: gift culture, and capitalism."
 ---
 
-**TL;DR**: The cookiecutter project is facing a fork. Their problem is one found throughout the Open Source world. It's a clash between economies: gift culture, and capitalism.
-
-> Two roads diverged in a yellow wood, \\
-> And sorry I could not travel both
-> --Robert Frost, The Road Not Taken
+**TL;DR**: The cookiecutter project is facing a fork, and their problem is one found throughout the Open Source world. It's a clash between economies: gift culture, and capitalism. The solution is to pick one. It doesn't matter which. Just know the repercussions of what you pick.
 
 ## A Fork in the Road
 
@@ -187,5 +183,7 @@ In short, when you come to the fork in the road. Pick one. Just like
 the poem, [it doesn't really matter which][frost-poem]. What matters is that you buy
 into whatever model fits you the best. All the way in.
 
+> Two roads diverged in a yellow wood, \\
+> And sorry I could not travel both
 
-
+Wise, Robert. Very wise.
