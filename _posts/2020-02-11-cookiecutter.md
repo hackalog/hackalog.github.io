@@ -97,15 +97,13 @@ goes like this:
 
 [cookiecutter-license]: https://github.com/cookiecutter/cookiecutter/blob/d9d25d3c735e4b00083c96b279ae98bfc8d3763f/LICENSE
 
-> "Will you support my future work on this project?"
+> "Will you support my future work on this project?" \\
 > "No."
-
 > "Seriously, I'd love to help. I just can't keep up with the support burden
-of massive, breaking features."
+of massive, breaking features." \\
 > "Then leave it to someone who can."
-
-> "What about all my over ocntribution sthe years?"
-> "It's open source. Deal with it."
+> "What about all my over contributions the years?" \\
+> "It's open source. The license says it's okay. Deal with it."
 
 These bad feelings have tangible repercussions. If you end up
 alienating those who know the project the best, you're greatly

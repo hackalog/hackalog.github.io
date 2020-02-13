@@ -63,18 +63,6 @@ h2 {
   font-size: 24px;
 }
 
-@media (min-width: 769px){
-	.post h2::before, .post h2::after {
-	    content: "";
-	    display: inline-block;
-	    vertical-align: middle;
-	    width: 46px;
-	    height: 1px;
-	    background: rgb(192, 211, 218);
-	    margin: 0px 30px;
-	}
-}
-
 h3 {
   font-size: 20px;
 }
@@ -376,7 +364,7 @@ nav {
     border-left: 0.3em solid $gray;
     padding: 0.1em 1em;
     color: $gray;
-    font-size: 22px;
+    font-size: 18px;
     font-style: italic;
     background-color: #f9f9f9;
     quotes: "\201C""\201D""\2018""\2019";
@@ -384,7 +372,7 @@ nav {
 
   blockquote p {
       display: inline;
-  }  
+  }
 
   .you-may-like{
     margin: 1.8em .8em;
@@ -616,7 +604,7 @@ Modules - reusable parts of our design
 
 #gh-latest{
     font-size: 16px;
-    text-align: center;		
+    text-align: center;
 }
 
 .text-link {
@@ -719,7 +707,7 @@ Modules - reusable parts of our design
   display: inline-block;
 }
 
-.pagination a {    
+.pagination a {
   &:hover {
       background-color: #f1f1f1;
       color: #333;
