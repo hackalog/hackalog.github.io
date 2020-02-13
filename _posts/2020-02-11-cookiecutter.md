@@ -98,10 +98,10 @@ goes like this:
 [cookiecutter-license]: https://github.com/cookiecutter/cookiecutter/blob/d9d25d3c735e4b00083c96b279ae98bfc8d3763f/LICENSE
 
 > "Will you support my future work on this project?" \\
-> "No."
+> "No." \\
 > "Seriously, I'd love to help. I just can't keep up with the support burden
 of massive, breaking features." \\
-> "Then leave it to someone who can."
+> "Then leave it to someone who can." \\
 > "What about all my over contributions the years?" \\
 > "It's open source. The license says it's okay. Deal with it."
 
