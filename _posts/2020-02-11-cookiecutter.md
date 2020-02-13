@@ -3,10 +3,10 @@ layout: post
 title: The Fork Not Taken
 date: 2020-02-11
 categories: [reproducibility, cookiecutter, easydata]
-excerpt: "The cookiecutter project is facing a fork, and their problem is one found throughout the Open Source world. It's a clash between economies: gift culture, and capitalism."
+excerpt: "The cookiecutter project is facing a fork. Their problems feel like a clash between models: capitalism, and the gift culture."
 ---
 
-**TL;DR**: The [cookiecutter] project is facing a fork, and their problem is one found throughout the Open Source world. It's a clash between economies: gift culture, and capitalism. The solution is to pick one. It doesn't matter which. Just know the repercussions of what you pick.
+**TL;DR**: The cookiecutter project is facing a fork. Their problems feel like a clash between models: capitalism, and the gift culture. The solution is to pick one. It doesn't matter which. Just know the repercussions of the path you take.
 
 ## A Fork in the Road
 
