@@ -185,3 +185,10 @@ into whatever model fits you the best. All the way in.
 > And sorry I could not travel both...
 
 Sing it, Robert Frost. Sing it.
+
+
+**UPDATE**: [Looks like no fork will be required][postscript]. The
+breaking changes will be handled by a new maintainer. High fives all
+round, and all my above comments still stand.
+
+[postscript]: https://github.com/cookiecutter/cookiecutter/issues/1256
