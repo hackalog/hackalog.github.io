@@ -30,6 +30,12 @@ If you were to survey you average data scientist on how much time they
 spend in a given phase of the operation, you'd probably get something
 that looks like this:
 
+![Supervised Learning][munge-supervised]
+![Unsupervised Learning][munge-unsupervised]
+
+[munge-unsupervised]: https://raw.githubusercontent.com/hackalog/bus_number/master/notebooks/references/charts/munge-unsupervised.png
+[munge-unsupervised]: https://raw.githubusercontent.com/hackalog/bus_number/master/notebooks/references/charts/munge-supervised.png
+
 In supervised learning, around 2/3 time is spent munging the data in
 the furst place, before you finally get around to doing your analysis.
 In unsupervised learning problems it's was more like 90%.
