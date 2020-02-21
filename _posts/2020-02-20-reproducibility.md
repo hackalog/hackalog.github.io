@@ -101,7 +101,7 @@ data sources—then data scientist productivity is lost, and
 reproducibility goes right out the window.
 
 ![The Reproducibility Matrix][reproducible-matrix]
-*Source: [The Turing Way]. [CC-BY-4.0]*
+*Source: [The Turing Way]. **([CC-BY-4.0])** *
 
 Our challenge is this: if we want reproducible data science—and
 that covers the entire spectrum of reproducibility, replicability,
