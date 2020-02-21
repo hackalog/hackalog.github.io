@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Fork Not Taken
-date: 2020-12-11
+date: 2019-12-11
 categories: [reproducibility, cookiecutter, easydata]
 excerpt: "The cookiecutter project is facing a fork. Their problems feel like a clash between models: capitalism, and the gift culture."
 ---
