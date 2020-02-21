@@ -79,7 +79,7 @@ challenges of reproducible environments, assuming that tools like
 conda have already solved that. Yet when we sit down to do the work,
 environment and data munging  issues dominate the effort.
 
-## The Challenge of Reproducible Data Science
+## Recognizing the Hard Parts
 
 One of our stated goals is make our analysts more prductive. How can
 we do this? Give them the ability to do their job with less futzing
