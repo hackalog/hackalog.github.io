@@ -101,7 +101,7 @@ data sources—then data scientist productivity is lost, and
 reproducibility goes right out the window.
 
 ![The Reproducibility Matrix][reproducible-matrix]
-*Source: [The Turing Way]*
+*Source: [The Turing Way]. [CC-BY-4.0]*
 
 Our challenge is this: if we want reproducible data science—and
 that covers the entire spectrum of reproducibility, replicability,
@@ -116,5 +116,6 @@ of building a toolkit that also solves the psychology and the user
 interface problems, the workflow, and the APIs associated with
 preventing reproducibility in the first place.
 
-[The Turing Way]: https://the-turing-way.netlify.com/reproducibility/03/definitions.html
+[the turing way]: https://the-turing-way.netlify.com/reproducibility/03/definitions.html
 [reproducible-matrix]: https://github.com/alan-turing-institute/the-turing-way/raw/master/book/content/figures/reproducibility/ReproducibleMatrix.jpg
+[cc-by-4.0]: https://creativecommons.org/licenses/by/4.0/
