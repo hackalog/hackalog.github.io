@@ -1,4 +1,12 @@
-## The Case of the Missing Munge
+---
+layout: post
+title: Reproducible Data Science
+date: 2020-02-20
+categories: [reproducibility, easydata]
+excerpt: "What's the hardest part about reproducible data science? Recognizing the hard parts."
+---
+
+## Missing Pieces
 
 About 2 years ago, we hosted a workshop on text analysis, where a lot
 of people did some really nice work embedding text into vector spaces
@@ -43,17 +51,17 @@ data munging.
 At Pydata NYC 2018, Amy and I ran a tutorial called "Reproducible Data
 Science: Up your bus number". At that workshop we were intending to
 talk a great deal about the munging of data, and the wonderful and
-clever APIs that we had settled on to  help simplify that
-process. When we actually ran the tutorial, it turned out that about
-80% of our time was spent before we even got to data munging. it was
-spent trying to set up consistent, reproducible environments on a wide
-variety of systems. The hard parts of getting to a reproducible data
-science pipeline (installing and maintaining your environment), for
-most of the people we were encountering, didn't even show up in the
-survey that we did about where your time is spent. Most people knew of
-(or even used) tools like anaconda or virtualenv, but not in a way
-that let them easily maintain and share these environments, or
-reproduce the environments of others.
+clever APIs that we had settled on to help simplify that process. When
+we actually ran the tutorial, it turned out that about 80% of our time
+was spent before we even got to data munging. it was spent trying to
+set up consistent, reproducible environments on a wide variety of
+systems. The hard parts of getting to a reproducible data science
+pipeline (installing and maintaining your environment), for most of
+the people we were encountering, didn't even show up in the survey
+that we did about where your time is spent. Most people knew of (or
+even used) tools like anaconda or virtualenv, but not in a way that
+let them easily maintain and share these environments, or reproduce
+the environments of others.
 
 Even if we could reproduce the data munging, we couldn't reproduce the
 *development environment*. We have all these fancy tools: anaconda,
