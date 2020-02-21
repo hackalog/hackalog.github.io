@@ -54,8 +54,8 @@ to create adopt a more standard workflow that would make it easy to
 preserve (and share) the whole process of data science, including the
 data munging.
 
-At Pydata NYC 2018, Amy and I ran a tutorial called "Reproducible Data
-Science: Up your bus number". At that workshop we were intending to
+At PyData NYC 2018, Amy and I ran a tutorial called "Reproducible Data
+Science: [Up your Bus Number]". At that workshop we were intending to
 talk a great deal about the munging of data, and the wonderful and
 clever APIs that we had settled on to help simplify that process. When
 we actually ran the tutorial, it turned out that about 80% of our time
@@ -120,3 +120,4 @@ preventing reproducibility in the first place.
 [the turing way]: https://the-turing-way.netlify.com/reproducibility/03/definitions.html
 [reproducible-matrix]: https://github.com/alan-turing-institute/the-turing-way/raw/master/book/content/figures/reproducibility/ReproducibleMatrix.jpg
 [cc-by-4.0]: https://creativecommons.org/licenses/by/4.0/
+[up your bus number]: https://pydata.org/nyc2018/schedule/presentation/46/
