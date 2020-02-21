@@ -99,6 +99,8 @@ environment, the data munging, the metadata associated with the data
 sources--then data scientist productivity is lost, analyst
 productivity is lost, and reproducibility goes right out the window.
 
+![The Reproducibility Matrix][reproducible-matrix]
+
 Our challenge is this: if we want reproducible data science -- and
 that covers the entire spectrum of reproducibility, replicability,
 generalizability, and robustness-- then the hardest thing we have to
@@ -111,3 +113,5 @@ an the psychology barriers. Then, and only then, put in the hard work
 of building a toolkit that also solves the psychology and the user
 interface problems, the workflow, and the APIs associated with
 preventing reproducibility in the first place.
+
+[reproducible-matrix]: https://github.com/alan-turing-institute/the-turing-way/tree/dd06cd468161c960acc2fd9196110deb583ff710/book/content/figures/reproducibility/reproducibleMatrix.png
