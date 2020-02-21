@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Fork Not Taken
-date: 2020-02-11
+date: 2020-12-11
 categories: [reproducibility, cookiecutter, easydata]
 excerpt: "The cookiecutter project is facing a fork. Their problems feel like a clash between models: capitalism, and the gift culture."
 ---
@@ -187,8 +187,9 @@ into whatever model fits you the best. All the way in.
 Sing it, Robert Frost. Sing it.
 
 
-**UPDATE**: [Looks like no fork will be required][postscript]. The
-breaking changes will be handled by a new maintainer. High fives all
-round, and all my above comments still stand.
+**UPDATE 2019-12-19**: [Looks like no fork will be required][postscript].
+The breaking changes will be handled by a new
+maintainer. High fives all round, and all my above comments still
+stand.
 
 [postscript]: https://github.com/cookiecutter/cookiecutter/issues/1256
