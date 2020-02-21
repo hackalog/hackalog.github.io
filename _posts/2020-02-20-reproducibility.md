@@ -19,7 +19,7 @@ had just gotten lucky.
 
 When we sat down to write up the analysis, we discovered really
 quickly that we had a problem. Though we still had a collection of
-Jupyter notebooks and the associated data blobs, we had *no idea* how
+`jupyter` notebooks and the associated data blobs, we had *no idea* how
 our collaborators had pre-processed their data to insert into the
 process in the first place. We had lost the information about the
 preparation of the data, and hence, we'd lost the ability to generate
@@ -93,8 +93,8 @@ productive. How can we do this? Give them the ability to do their job
 with less futzing around with their environments, and make it easy for
 them to share their work—including the data munging. The primary means
 by which data scientists exchange data science lore is by passing
-around Jupyter notebooks. But there's so much that goes in under the
-hood before that jupyter notebook ever even gets run, that if we don't
+around `jupyter` notebooks. But there's so much that goes in under the
+hood before that `jupyter` notebook ever even gets run, that if we don't
 take steps to that additional information—including information about
 the environment, the data munging, the metadata associated with the
 data sources—then data scientist productivity is lost, and
@@ -116,5 +116,5 @@ of building a toolkit that also solves the psychology and the user
 interface problems, the workflow, and the APIs associated with
 preventing reproducibility in the first place.
 
-[The Turing Way]: https://the-turing-way.netlify.com
+[The Turing Way]: https://the-turing-way.netlify.com/reproducibility/03/definitions.html
 [reproducible-matrix]: https://github.com/alan-turing-institute/the-turing-way/raw/master/book/content/figures/reproducibility/ReproducibleMatrix.jpg
