@@ -114,4 +114,4 @@ of building a toolkit that also solves the psychology and the user
 interface problems, the workflow, and the APIs associated with
 preventing reproducibility in the first place.
 
-[reproducible-matrix]: https://github.com/alan-turing-institute/the-turing-way/tree/dd06cd468161c960acc2fd9196110deb583ff710/book/content/figures/reproducibility/reproducibleMatrix.png
+[reproducible-matrix]: https://github.com/alan-turing-institute/the-turing-way/raw/master/book/content/figures/reproducibility/ReproducibleMatrix.jpg
