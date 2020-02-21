@@ -54,20 +54,20 @@ to create adopt a more standard workflow that would make it easy to
 preserve (and share) the whole process of data science, including the
 data munging.
 
-At PyData NYC 2018, Amy and I ran a tutorial called "Reproducible Data
-Science: [Up your Bus Number]". At that workshop we were intending to
-talk a great deal about the munging of data, and the wonderful and
-clever APIs that we had settled on to help simplify that process. When
-we actually ran the tutorial, it turned out that about 80% of our time
-was spent before we even got to data munging. it was spent trying to
-set up consistent, reproducible environments on a wide variety of
-systems. The hard parts of getting to a reproducible data science
-pipeline (installing and maintaining your environment), for most of
-the people we were encountering, didn't even show up in the survey
-that we did about where your time is spent. Most people knew of (or
-even used) tools like anaconda or virtualenv, but not in a way that
-let them easily maintain and share these environments, or reproduce
-the environments of others.
+At PyData NYC 2018, Amy and I ran a tutorial called "[Up your Bus
+Number]: A Reproducible Data Science Workflow." At that workshop we
+were intending to talk a great deal about the munging of data, and the
+wonderful and clever APIs that we had settled on to help simplify that
+process. When we actually ran the tutorial, it turned out that about
+80% of our time was spent before we even got to data munging. it was
+spent trying to set up consistent, reproducible environments on a wide
+variety of systems. The hard parts of getting to a reproducible data
+science pipeline (installing and maintaining your environment), for
+most of the people we were encountering, didn't even show up in the
+survey that we did about where your time is spent. Most people knew of
+(or even used) tools like anaconda or virtualenv, but not in a way
+that let them easily maintain and share these environments, or
+reproduce the environments of others.
 
 Even if we could reproduce the data munging, we couldn't reproduce the
 *development environment*. We have all these fancy tools: anaconda,
