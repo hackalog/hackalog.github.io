@@ -32,13 +32,12 @@ spend in a given phase of the operation, you'd probably get something
 that looks like this:
 
 ![Supervised Learning][munge-supervised]
-![Unsupervised Learning][munge-unsupervised]
-
-[munge-unsupervised]: https://raw.githubusercontent.com/hackalog/bus_number/master/notebooks/references/charts/munge-unsupervised.png
-[munge-supervised]: https://raw.githubusercontent.com/hackalog/bus_number/master/notebooks/references/charts/munge-supervised.png
 
 In supervised learning, around 2/3 time is spent munging the data in
 the first place, before you finally get around to doing your analysis.
+
+![Unsupervised Learning][munge-unsupervised]
+
 In unsupervised learning problems it's was more like 90%.
 
 Admittedly, like all statistics, these actual numbers are made up, but
@@ -116,6 +115,8 @@ of building a toolkit that also solves the psychology and the user
 interface problems, the workflow, and the APIs associated with
 preventing reproducibility in the first place.
 
+[munge-unsupervised]: https://raw.githubusercontent.com/hackalog/bus_number/master/notebooks/references/charts/munge-unsupervised.png
+[munge-supervised]: https://raw.githubusercontent.com/hackalog/bus_number/master/notebooks/references/charts/munge-supervised.png
 [the turing way]: https://the-turing-way.netlify.com/reproducibility/03/definitions.html
 [reproducible-matrix]: https://github.com/alan-turing-institute/the-turing-way/raw/master/book/content/figures/reproducibility/ReproducibleMatrix.jpg
 [cc-by-4.0]: https://creativecommons.org/licenses/by/4.0/
