@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Great Myths of the Python Environment Managers
+title: Myths of the Python Environment Managers
 date: 2020-01-20
 categories: [python, reproducibility]
 excerpt: In open source land, there's a lot of fighting that goes on about just which virtual environment manager is the right one to use. While not myths exactly, I'm going to bust a few of these opinions, or at least try to convince you that while it may be a perfectly good solution for your use case, that doesn't mean it solves my (or my customers') problems.
@@ -21,8 +21,7 @@ trying to use, you might prefer:
 * [pip-tools]
 * [pyenv]
 
-{% include pullquote.html quote="Like the mantra 'strong opinions, loosely held', except without the second part." %}
-As with everything in open source land, there's a lot of fighting that
+As with many topics in open source land, there's a lot of fighting that
 goes on about just which virtual environment manager is the right one
 to use.
 
@@ -102,6 +101,21 @@ Tanenbaum][tanenbaum-quotes]:
 So take your pick. `requirements.txt`, `setup.cfg`, `MANIFEST.in`,
 `Pipfile`, `environment.yml`. They could all be thought of as
 *standard*.
+
+### In Short: Know Your Use Case
+
+There are a **lot** of ways to do python packaging. This is because
+there are a lot of different use cases out there. I think it's
+important to know the strengths and weaknesses of each of the choices
+before heading out and advocating for one or the other. For instance,
+we standardized on `conda` in EasyData for a variety of reasons. It's
+the best tool for our particular application **right now**, but we're always
+ready to revisit that assumption. Hopefully you will be, too.
+
+And for goodness sake, don't go and invent your own environment
+manager until you're positive the existing choices won't do the trick
+for you. This list is long enough already.
+
 
 [warrick-pipenv]: https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/ "Pipenv: promises a lot, delivers very little"
 [reddit-pipenv]: https://np.reddit.com/r/Python/comments/8jd6aq/why_is_pipenv_the_recommended_packaging_tool_by/ "The Reddit thread that killed the 'Pipenv is official' claim"
