@@ -8,14 +8,16 @@ excerpt: "What's the hardest part about reproducible data science? Recognizing t
 
 ## Missing Pieces
 
-About 2 years ago, Amy and I attended a workshop on text analysis,
+About 2 years ago, [acwooding] and I attended a workshop on text analysis,
 where a lot of people did some really nice work embedding text into
-vector spaces under a variety of algorithms.  What Amy and I were
+vector spaces under a variety of algorithms.  What we were
 working on was trying to establish some stability results;
 i.e. whether repeated embeddings the various algorithms were stable,
 or whether the results were all over the place because, for example,
 we got results all over the place the algorithm was randomized and we
 had just gotten lucky.
+
+[acwooding]: https://github.com/acwooding/
 
 When we sat down to write up the analysis, we discovered really
 quickly that we had a problem. Though we still had a collection of
@@ -54,7 +56,7 @@ to create adopt a more standard workflow that would make it easy to
 preserve (and share) the whole process of data science, including the
 data munging.
 
-At PyData NYC 2018, Amy and I ran a tutorial called "[Up your Bus
+At PyData NYC 2018, we ran a tutorial called "[Up your Bus
 Number]: A Reproducible Data Science Workflow." At that workshop we
 were intending to talk a great deal about the munging of data, and the
 wonderful and clever APIs that we had settled on to help simplify that
