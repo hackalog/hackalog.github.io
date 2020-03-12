@@ -268,6 +268,22 @@ Here are some of our favourite tool combinations:
 * **Single Sign-on**. We use a password manager (1Password) and generate unique random, strong passwords on every platform or website we use.
 * **Corporate email**. Hopefully you’re sold on the virtues of **not** using email for team communications.
 
+## Good Remote Work References
+
+Don't take our word for it. Here is some good reading on the various topics covered in this post.
+
+* [Building Remote Office Culture with a Watercooler Channel][watercooler]
+* [Remote Work and the Coronavirus][automattic-coronavirus]
+* [Behind the scenes: culture and tools of remote work at Automattic][automattic-culture]
+* Basecamp's [How We Communicate][basecamp-how]
+* Extreme Remote Work: [Steven Wolfram's CEO Livestream][wolfram-livestream]
+* [Distributed with Matt Mullenweg][automattic-podcast] - Great podcast with Automattic's Founder
+* [Remote: Office Not Required][remote-book]
+* Paul Graham on [The Maker's Schedule][maker-schedule]
+* [Auto-checkins in Basecamp][auto-checkins]
+* [Mozilla Best Practices][mozilla-best-practices]
+
+
 [watercooler]: https://revelry.co/watercooler-channel/
 [automattic-coronavirus]: https://ma.tt/2020/03/coronavirus-remote-work/
 [automattic-culture]: https://stephyiu.com/2019/02/17/behind-the-scenes-culture-and-tools-of-remote-work-at-automattic/
