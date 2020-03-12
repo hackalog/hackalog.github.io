@@ -3,7 +3,7 @@ layout: post
 title: The LLF Guide to Remote Work
 date: 2020-03-08
 categories: [remote work]
-excerpt: "What's the hardest part about reproducible data science? Recognizing the hard parts."
+excerpt: "Some of the things we've learned, both as remote workers, and as remote team managers, in 5 years of remote working."
 ---
 
 A colleague of ours recently asked us about the challenges of doing
@@ -16,8 +16,8 @@ model by borrowing heavily from companies with far more experienced
 than us (e.g. [Automattic][automattic-culture], [Mozilla][mozilla-best-practices], [Basecamp][basecamp-how]), and then iterating on
 those practices based on our own experiences.
 
-Here are some of the things we've learned, both from the perspective
-of remote workers, and the perspective of remote team managers.
+Here are some of the things we've learned, both as remote workers, and as remote team managers,
+over the last 5 years.
 
 ## On Culture
 
