@@ -185,62 +185,93 @@ for a while. Use it.
 
 ## For the Remote Team Manager
 
-Trust your teammates. One of the first questions we get whenever we talk about remote work arrangements is “what do you do if someone starts slacking off.”  They don’t. The whole magic of a flexible work arrangement is that so long as you are meeting your objectives, we really don’t need to know how you’re doing it. Presumably, you already have mechanisms to review work, with performance reviews and the like. Trust them. if the performance reviews are broken, fix them. In the meantime, trust your teammates.
+**Trust your team members**. One of the first questions we get
+whenever we talk about remote work arrangements is “what do you do if
+someone starts slacking off.”  They don’t. The whole magic of a
+flexible work arrangement is that so long as you are meeting your
+objectives, we really don’t need to know how you’re doing
+it. Presumably, you already have mechanisms to review work, with
+performance reviews and the like. Trust them. if the performance
+reviews are broken, fix them. In the meantime, **trust your team members**.
 
-Don't let your people work too much. Ironically, with all the questions around remote workers slacking off,  it’s working too much that often ends up being the real danger. It's really easy to get sucked in to working too much when you live in your workspace. Keep an eye on your workers. Make it a cultural badge of honour to *not* work more than 40 hours in a week. 
+**Don't let your people work too much**. Ironically, with all the
+questions around remote workers slacking off, it’s working too much
+that often ends up being the real danger. It's really easy to get
+sucked in to working too much when you live in your workspace. Keep
+an eye on your workers. Make it a cultural badge of honour to *not*
+work more than 40 hours in a week.
 
-Don't require a fixed work schedule: Let people define the hours that best work for them. Trust them to do the work the way that suits them best, and you’ll be amazed at the results.
+**Don't require a fixed work schedule**.  Let people define the hours
+that best work for them. Trust them to do the work the way that suits
+them best, and you’ll be amazed at the results.
 
-Don’t try and replicate the in-person office experience online. In fact, you should use the remote work experience to improve your in-person office work environment. There are a lot of unique advantages to remote work. Take advantage of these advantages. Get your team used to them, and use the change of setting to apply them back to the office setting. One of our favorites is opening up the decision-making process and letting more people in to see how decisions are made in real time. Distributed tools allow everyone to be in the room, not just "management.”
+**Don’t try and replicate the in-person office experience** remotely. In
+fact, you should **use the remote work experience to improve your
+in-person office work environment**. There are a lot of unique
+advantages to remote work. Take advantage of these advantages. Get
+your team used to them, and use the change of setting to apply them
+back to the office setting. One of our favorites is opening up the
+decision-making process and letting more people in to see how
+decisions are made in real time. Distributed tools allow everyone to
+be in the room, not just "management.”
 
 ## Tools We Use
 
-No talk of remote work would be complete without mentioning the tools we use. Likely, every remote work scenario will use tools to implement at least the following functions. 
+No talk of remote work would be complete without mentioning the tools
+we use. Likely, every remote work scenario will use tools to implement
+at least the following functions.
 
-* real-time team chat (e.g. Slack, Skype for Business, Mattermost) 
-* Shared Calendar (Basecamp, Google Calendar)
+* Real-time team chat (e.g. Slack, Skype for Business, Mattermost) 
+* Shared valendar (Basecamp, Google Calendar)
 * Videoconferencing (Zoom, Google Hangouts, Skype)
-* Information (Files, Docs) Repository (e.g. MediaWiki, Notion, Confluence)
-* Team Blogging Platform (Confluence, Wordpress)
+* Information Repository (MediaWiki, Notion, Confluence)
+* Team blogging platform (Confluence, Wordpress)
 
 If you’re a technology shop, you’ll likely also need these:
 
 * Shared Kanban / Sprint boards (Trello)
-* Brainstorming Tools (e.g. Miro, Mural)
+* Brainstorming Tools (Miro, Mural)
 * Code Repo (GitHub, Gitlab, BitBucket) and CI
 
-So what do we use? Here are some of our favourite tool combinations:
+Here are some of our favourite tool combinations:
 
-slack + mediawiki + zoom + trello + miro + google cal + notion + github/bitbucket
-
-Or:
-
-Basecamp + zoom + slack + github
+* slack + mediawiki + zoom + trello + miro + google cal + notion + github/bitbucket
 
 Or:
 
-Confluence + Bitbucket + Trello
+* Basecamp + zoom + slack + github
+
+Or:
+
+* Confluence + Bitbucket + Trello
 
 
-### Tools we use but don’t want to talk about here
+## Tools we use but don’t want to talk about here
 
-* Shared Todo Managers. Actually, we use them all the time, but this level of personal productivity tends to be very personal. We’d recommend you leave this part of the stack up to the individual. (We currently use Nozbe, though we’ve tried Asana and OmniFocus as well.)
-* Time tracking and Reporting. We use toggl, if it matters.
-* Newsletter tools and CRM tools. We use mailchimp.
+* **Shared Todo Managers**. Actually, we use them all the time, but
+    this level of personal productivity tends to be very
+    personal. We’d recommend you leave this part of the stack up to
+    the individual. (We currently use Nozbe, though we’ve tried Asana
+    and OmniFocus as well.)
+* **Time tracking and Reporting**. We use toggl, if it matters.
+* **Customer Relations Management (CRM) tools**. We use Mailchimp.
 
-## Tools we Don't Use
-* Ticketing (e.g. Jira). We’re simply not in that business.  Besides, that’s more of a business function than a remote-work enabler. Ditto for Zendesk
-* Single Sign-on. We use a password manager (1password) and generate unique random, strong passwords on every platform we use.
-* Corporate email. (Hopefully you’re sold on the virtues of not using email for team communications). 
+## Tools we don't use
 
-[watercooler]:https://revelry.co/watercooler-channel/
-[automattic-coronavirus]:  https://ma.tt/2020/03/coronavirus-remote-work/
+* **Ticketing* (e.g. Jira, Zendesk). We’re simply not in that
+    business.  Besides, that’s more of a business function than a
+    remote-work enabler.
+* **Single Sign-on**. We use a password manager (1password) and generate unique random, strong passwords on every platform or website we use.
+* **Corporate email**. Hopefully you’re sold on the virtues of **not** using email for team communications. 
+
+[watercooler]: https://revelry.co/watercooler-channel/
+[automattic-coronavirus]: https://ma.tt/2020/03/coronavirus-remote-work/
 [automattic-culture]: https://stephyiu.com/2019/02/17/behind-the-scenes-culture-and-tools-of-remote-work-at-automattic/
 [basecamp-how]: https://basecamp.com/guides/how-we-communicate
 [wolfram-livestream]: https://www.wired.com/story/what-do-i-do-all-day-livestreamed-technology-ceoing/
 [automattic-podcast]: podcasts.apple.com/us/podcast/distributed-with-matt-mullenweg/id1463243282
-[remote-book]: basecamp.com/books/remote
+[remote-book]: https://basecamp.com/books/remote
 [maker-schedule]: http://www.paulgraham.com/makersschedule.html
-[auto-checkins]: basecamp.com/features/checkins
+[auto-checkins]: https://basecamp.com/features/checkins
 [mozilla-best-practices]: https://www.youtube.com/watch?v=83fk3RT8318
 
