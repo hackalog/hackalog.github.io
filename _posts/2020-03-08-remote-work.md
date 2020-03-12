@@ -13,80 +13,175 @@ time. For those of us fortunate enough to be knowledge workers,
 working from home is pretty accessible. At Learn Leap Fly, we’ve been
 doing remote work since the company started in 2015. We built our
 model by borrowing heavily from companies with far more experienced
-than us (e.g. Automattic, Mozilla, Basecamp), and then building on
-those practices with our own experience.
+than us (e.g. [automattic-culture][Automattic], [mozilla-best-practices][Mozilla], [basecamp-how][Basecamp]), and then iterating on
+those practices based on our own experiences.
 
 Here are some of the things we've learned, both from the perspective
-of remote workers, and the perspective of remote work team managers.
+of remote workers, and the perspective of remote team managers.
+
+## On Culture
+
+Be intentional and deliberate about **fostering your team
+culture**. One of the big liabilities of remote work is that it's easy
+to lose the human side of interactions. To keep your culture in a
+remote work environment, you have to be intentional and actively
+foster it.
+
+Culture is what you do, not what you say you do. Culture is made up of
+the shared practices that you have in common, and what they reflect
+about your values as a team. Do you silently tolerate an in-crowd or
+do you actively practice and foster open communication channels that
+include everyone on your team? Do you favor extroverts, or do you give
+a voice to everyone? Remote work is a great opportunity to reflect on
+different ways of working and interacting. Whatever practices you
+adopt will inevitably reflect and determine the culture of your team.
+
+We recommend you use the remote work opportunity to be deliberate
+about what you value, to document these values, and develop processes
+that nurture and reflect the culture that you wish to have in your
+organization.
 
 
 ## On Meetings, Synchronous, and Asynchronous communication.
 
 I'd go out on a limb and say that every successful remote-work
-organization has a *real-time sometimes, asynchronous
-most-of-the-time* communications culture. That is, if asynchronous
-means will get the job done, **do it asynchronously*.
+organization has a *asynchronous most-of-the-time* communications
+culture. That is, if asynchronous means will get the job done, **do it
+asynchronously*. This means:
 
-Don't hold a lot of meetings: This is a general rule of thumb for productive work, period, but it is even more important when working remotely. Use remote work as an opportunity to break your meeting habit, and to develop more productive, asynchronous communications habits.
+**Don't hold a lot of meetings.** This is a [maker-schedule][general rule of thumb for
+  productive work], period. Use remote work as an opportunity to **break your meeting
+  habit**, and to develop more productive, asynchronous communications
+  habits.
 
-Meetings (or video calls) are hard to schedule—especially across timezones—and are far more costly than anyone remembers to think. (As basecamp puts it: “five people in a room for an hour isn't a one hour meeting, it's a five hour meeting”). That said, at Learn Leap Fly we have one regular meeting, the weekly standup, held every Monday. Some regular facetime is nice, since it's easy to start feeling a lonely and isolated without laying eyes on your coworkers.
+**Recognize the true cost of meetings**. In addition to being hard to schedule (especially across timezones), synchronous meetings far more costly than anyone remembers to think. As Basecamp puts it: “five people in a room for an hour isn't a one hour meeting, it's a **five hour** meeting”.
 
-So if you want to do video meetings (sparsely!), here’s the best practices we have settled on.
-* Have an agenda shared in advance. For regular meetings you don't have to share the agenda every time if stays the same. For example, our weekly standups and sprint rollovers both have set agendas, that are the same every time. We evolve these agendas over time as we need to, and keep them on our wiki.
-* Aim for the highest quality audio and video you can get. We use zoom (which has easily the best multi-party video quality). Make sure everyone has good quality headphones and mics.
-* Connect from someplace quiet. No coffee shops. In a pinch, use a car, or even a closet. 
-* One screen per person. Even if more then one person happens to be working from the same space, require everyone to have an individual connection to the video chat. This puts everyone on the same footing. There's nothing worse than watching an off-camera, hard-to-hear conversation from across a bad quality video-feed. One screen per person levels the playing field, letting everybody feel like an equal contributor, regardless of where they are working from.
+That said, **face-time is important**. Learn Leap Fly has one regular
+meeting--the weekly standup--held every Monday. It's easy to start
+feeling a lonely and isolated without laying eyes on your coworkers
+once in a while.
+
+If you do want to hold synchronous meetings (sparingly!), here's our advice:
+
+* **Share the agenda in advance**. For regular meetings with a set
+    agenda (e.g. Sprint Rollovers) it's sufficient to share the agenda
+    once. We keep them on our wiki, and evolve them over time as we
+    need to.
+* Use the **highest quality audio and video platform** you can
+  afford.. We use zoom (which has easily the best multi-party video
+  quality).
+* Make sure **everyone has good quality headphones and mics**.
+* **Connect from someplace quiet**. No coffee shops. In a pinch, use a
+    car, or even a closet. (but please, don't use a bathroom. that's
+    just... weird.)
+* **Use one screen per person**. Even if more then one person happens
+    to be working from the same space, require everyone to have an
+    individual connection to the video chat. This puts everyone on the
+    same footing. There's nothing worse than watching an off-camera,
+    hard-to-hear conversation from across a bad quality
+    video-feed. One screen per person levels the playing field,
+    letting everybody **feel like an equal contributor**, regardless
+    of whether they are remote or local.
 
 ## On Email, Blogs, and Wikis
 
-Don't use email for internal business communication. Just don't. Email is inefficient and distracting. Use it to communicate with those outside your business if you must, but use whatever real-time messaging tool comes with the suite of remote tools you've chosen (e.g. Slack, Skype for Business, Basecamp), and some platform for more permanent business writing (internal blogs, wikis, and so on) for internal communications.
+**Don't use email** for internal business communication. Just
+  don't. Use it to communicate with those outside your business if you
+  must, but use an **asynchronous messaging tool** (e.g. Slack, Skype
+  for Business, Basecamp) for conversations, and a **documentation
+  platform** (e.g. blogs, wikis) for more permanent team
+  communications.
 
-Write things down! Basecamp likes to say:"Speaking only helps who’s in the room, writing helps everyone.” This includes people who couldn't make it to a meeting, future employees or contractors, or even future you.
+**Write things down**. [basecamp-how][Basecamp likes to say]:
+  "Speaking only helps who’s in the room, writing helps everyone.”
+  Think about the people who couldn't make it to a meeting, future
+  employees or contractors, and even **future you**.
 
-How do you communicate? Internal blogs are great for more detailed ongoing posts about your work. A Wiki can be great for long-form, archived information. Automattic uses a wordpress theme called P2 to merge their chat, checkins, and blog posts into a single interface. Atlassian has confluence. Learn Leap Fly uses MediaWiki and Notion. There are lots of options.
+**Pick the tools that work for you**. Internal blogs are great for
+  more detailed ongoing posts about your work. A Wiki can be great for
+  long-form, archived information. Automattic uses a wordpress theme
+  called P2 to merge their chat, checkins, and blog posts into a
+  single interface. Atlassian has confluence. Learn Leap Fly uses
+  MediaWiki and Notion. There are lots of options.
 
-Use daily check-ins. It's really easy to lose the serendipitous advantages that come from running into each other at the office and chatting about what you’re currently working on. The informal and unplanned sharing of information is key to productivity and creativity of teams. Whether this is jotting down a few notes on the corporate wiki every day, or using the wonderful “automatic check-in” features of products like Basecamp, set aside a few minutes at the end of each work day to share what you have been working on with your colleagues.
-
-A word of caution on check-ins, however. Daily check-in posts should never be used as an employee evaluation mechanism or you quickly lose the many benefits of these posts. 
-
+**Record daily check-ins**. It's really easy to lose the serendipitous
+  advantages that come from running into each other at the office and
+  chatting about what you’re currently working on. The informal and
+  unplanned sharing of information is key to productivity and
+  creativity of teams. Whether this is jotting down a few notes on the
+  corporate wiki every day, or using the wonderful “automatic
+  check-in” features of products like Basecamp, set aside a few
+  minutes at the end of each work day to share what you have been
+  working on with your colleagues.
 
 ## Digital Watercoolers.
 
-Have places where people can interact and let off steam. We have a #feeds channel in slack so people can share interesting things they’re reading online. Some companies have a #watercooler or #random channel for off-topic chat. The point is, people need to interact about things that aren’t mainline work (and this is a good thing).
+Work isn't always just about working. Have places where people can
+interact and let off steam. At LLF, we have a #feeds channel in slack
+so people can share interesting things they’re reading
+online. [watercooler][Some companies] have a #watercooler or #random
+channel for off-topic chat. The point is, people need to interact
+about things that aren’t mainline work (and this is a good thing).
 
-https://revelry.co/watercooler-channel/
 
 
 ## The Arc of Work
 
-Have sprints, with a specific goal and specific end date. Ours are either 2 or 3 weeks long, and we identify specific success criteria to make sure our sprints aren’t overly ambitious. Whenever we hit these goals, we have a mini-celebration at the sprint rollover. 
+**Work in sprints**, with a specific goal and specific end date. Ours
+are either 2 or 3 weeks long, and we identify specific success
+criteria to make sure our sprints aren’t overly
+ambitious. Whenever we hit these goals, we have a mini-celebration
+at the sprint rollover.
 
-We have everyone write up a sprint report as part of our sprint rollovers. This is a little post that answers the following questions: What did you set out to do? What did you actually do? What’s blocking your progress? Are there any process changes that would help you? What’s your morale (1-10)? 
+**Document your successes, and failures**. We have everyone write up
+a sprint report as part of our sprint rollovers. This is a little
+post that answers the following questions: What did you set out to
+do? What did you actually do? What’s blocking your progress? Are
+there any process changes that would help you? What’s your morale
+(1-10)?
 
-We also organize sprints into larger thrusts, roughly 3 months long, for which we prepare a more detailed summary of what we accomplished and learned. Basecamp calls these heartbeats. Learn Leap Fly called them Phases. The act of reflecting on a larger arc is really, really useful to keep you from losing the forest in all those daily trees.
-
-
-## On Culture
-Be intentional and deliberate about fostering your team culture. One of the big liabilities of remote work is that culture gets forgotten. You have to actively foster it and be intentional about it remotely...otherwise even worse things happen than in real life since there's no facial emotional response on the other end of most remote work tools.
-
-The upside of being intentional about culture is that you get benefits of being intentional about culture. This can be a positive side-effect of adopting remote work practices.
-
-Culture is what you do, not what you say you do. Culture is made up of the shared practices that you have in common, and what they reflect about your values as a team. Do you silently tolerate an in-crowd or do you actively practice and foster open communication channels that include everyone on your team?
-
-All of the remote work practices that we are sharing reflect the culture of the Learn Leap Fly team. Whatever practices you adopt will reflect and determine the culture of your team.
+Organize sprints into **larger arcs**. Ours are roughly 3 months
+long, after which we prepare a more detailed summary of what we
+accomplished and learned. Basecamp calls these checkins "heartbeats."
+The act of reflecting on a larger arc is really, really useful to keep
+you from losing the forest in all those daily trees.
 
 
 ## For the Remote Worker
 
-Have a dedicated personal work space. Home offices are amazing for productivity. If you don't have room for an office, create a space that you only use for working. 
+Have a **dedicated personal work space**. Home offices are amazing for
+productivity. If you don't have room for an office, create a space
+that you only use for working.
 
-Get dressed for work. We don’t mean “dress up.” We mean, “get changed out of your pajamas”. Having a transition from your “home day” to your “work day” is important. Some people even leave their house, head to a coffee shop, read the paper, then come back home to start their work day. Whatever you do, try and establish a routine around starting, and stopping work for the day.
+Think about **ergonomics**. Invest in a properly set-up desk, a great
+chair, monitor stands, and a good keyboard. Companies like Automattic
+give stipends for home-office setup costs. This is a great way to help
+people build a productive and ergonomic home office.
 
-Have dedicated work hours. This is as much for other people as it is for you. Plan when you are going to start, when you are going to stop, and communicate these times with everyone who needs to know them. At Learn Leap Fly, we use a shared Google calendar for this.
+**Get dressed for work**. We don’t mean “dress up.” We mean, “get
+changed out of your pajamas”. Having a transition from your “home day”
+to your “work day” is important. We've heard of people that will go to
+a coffee shop first thing, read the paper, and then come back to their house
+to start their work day. Whatever works for you, try and establish a
+routine around starting, and stopping work for the day.
 
-Speak up! One of the drawbacks of remote work is that no one can see you beavering away. Share what you’re doing on the group chat. Post your daily checkins and weekly updates. 
+**Have dedicated work hours**. This is as much for other people as it is
+for you. Plan when you are going to start, when you are going to stop,
+and communicate these times with everyone who needs to know them. At
+Learn Leap Fly, we use a shared Google calendar for this.
 
-Stay logged in to the group chat (Slack, Mattermost, Skype for Business, or whatever) whenever you are working. For some reason, seeing that little green dot that tells you other people are online—even if you’re not actively talking to them—is super comforting when remote working. Stay present, but don't constantly check your messages, and get sucked into side conversations if you're trying to do deep work. Most messaging tools let you turn on a "Do not disturb" knob that silences notifications for a while. Use it. 
+**Speak up!** One of the drawbacks of remote work is that no one can see
+you beavering away. Share what you’re doing on the group chat. Post
+your daily checkins and weekly updates.
+
+**Stay logged in to the group chat** whenever you are working. For
+some reason, seeing that little green dot that tells you other
+people are online—even if you’re not actively talking to them—is
+super comforting when remote working. Stay present, but don't
+constantly check your messages, and get sucked into side
+conversations if you're trying to do deep work. Most messaging tools
+let you turn on a "Do not disturb" knob that silences notifications
+for a while. Use it.
 
 ## For the Remote Team Manager
 
@@ -147,4 +242,5 @@ Confluence + Bitbucket + Trello
 [remote-book]: basecamp.com/books/remote
 [maker-schedule]: http://www.paulgraham.com/makersschedule.html
 [auto-checkins]: basecamp.com/features/checkins
+[mozilla-best-practices]: https://www.youtube.com/watch?v=83fk3RT8318
 
