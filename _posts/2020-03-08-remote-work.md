@@ -214,7 +214,7 @@ that best work for them. Trust them to do the work the way that suits
 them best, and you’ll be amazed at the results.
 
 **Don’t try and replicate the in-person office experience** remotely. In
-fact, you should **use the remote work experience to improve your
+fact, you should use the **remote** work experience to **improve your
 in-person office work environment**. There are a lot of unique
 advantages to remote work. Take advantage of these advantages. Get
 your team used to them, and use the change of setting to apply them
