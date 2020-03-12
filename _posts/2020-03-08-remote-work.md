@@ -10,7 +10,7 @@ A colleague of ours recently asked us about the challenges of doing
 "remote work".  Obviously, in the current health environment, a lot of
 organizations are considering doing remote work for the first
 time. For those of us fortunate enough to be knowledge workers,
-working from home is pretty accessible. At Learn Leap Fly, we’ve been
+working from home is pretty accessible. At [Learn Leap Fly], we’ve been
 doing remote work since the company started in 2015. We built our
 model by borrowing heavily from companies with far more experienced
 than us (e.g. [Automattic][automattic-culture], [Mozilla][mozilla-best-practices], [Basecamp][basecamp-how]), and then iterating on
@@ -294,4 +294,4 @@ Don't take our word for it. Here is some good reading on the various topics cove
 [maker-schedule]: http://www.paulgraham.com/makersschedule.html
 [auto-checkins]: https://basecamp.com/features/checkins
 [mozilla-best-practices]: https://www.youtube.com/watch?v=83fk3RT8318
-
+[learn leap fly]: https://learnleapfly.com
