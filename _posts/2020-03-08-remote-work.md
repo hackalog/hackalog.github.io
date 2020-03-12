@@ -243,10 +243,10 @@ If you’re a technology shop, you’ll likely also need these:
 
 Here are some of our favourite tool combinations:
 
-* The "Free Tier": slack + mediawiki + zoom + trello + miro + google cal + notion + github/bitbucket
-* The "All-in-one(ish)": Basecamp + zoom + slack + github
-* "The Atlassian": Confluence + Bitbucket + Trello + slack + zoom.
-* "The Self-Hoster": Mattermost + wordpress/P2 + MediaWiki + GitLab + zoom
+* The **Free Tier**: slack + mediawiki + zoom + trello + miro + google cal + notion + github/bitbucket
+* The **All-in-one(ish)**: Basecamp + zoom + slack + github
+* The **Atlassian**: Confluence + Bitbucket + Trello + slack + zoom.
+* The **Self-Hoster**: Mattermost + wordpress/P2 + MediaWiki + GitLab + zoom
 
 ## Tools we use but don’t want to talk about here
 
