@@ -27,13 +27,13 @@ to lose the human side of interactions. To keep your culture in a
 remote work environment, you have to be intentional and actively
 foster it.
 
-Culture is what you do, not what you say you do. Culture is made up of
+**Culture is what you do**, not what you say you do. Culture is made up of
 the shared practices that you have in common, and what they reflect
 about your values as a team. Do you silently tolerate an in-crowd or
 do you actively practice and foster open communication channels that
 include everyone on your team? Do you favor extroverts, or do you give
-a voice to everyone? Remote work is a great opportunity to reflect on
-different ways of working and interacting. Whatever practices you
+a voice to everyone? Remote work is a great opportunity to **reflect on
+different ways of working and interacting**. Whatever practices you
 adopt will inevitably reflect and determine the culture of your team.
 
 We recommend you use the remote work opportunity to be deliberate
@@ -42,26 +42,27 @@ that nurture and reflect the culture that you wish to have in your
 organization.
 
 
-## On Meetings, Synchronous, and Asynchronous communication.
+## On Synchronous vs. Asynchronous Communication.
 
 I'd go out on a limb and say that every successful remote-work
-organization has a *asynchronous most-of-the-time* communications
+organization has a **asynchronous most-of-the-time** communications
 culture. That is, if asynchronous means will get the job done, **do it
-asynchronously*. This means:
+asynchronously**. This means:
 
 **Don't hold a lot of meetings.** This is a [general rule of thumb for
-  productive work][maker-schedule], period. Use remote work as an opportunity to **break your meeting
+  productive work, period][maker-schedule]. Use remote work as an opportunity to **break your meeting
   habit**, and to develop more productive, asynchronous communications
   habits.
 
-**Recognize the true cost of meetings**. In addition to being hard to schedule (especially across timezones), synchronous meetings far more costly than anyone remembers to think. As Basecamp puts it: “five people in a room for an hour isn't a one hour meeting, it's a **five hour** meeting”.
+**Recognize the true cost of meetings**. In addition to being hard to schedule (especially across timezones), synchronous meetings far more costly than anyone remembers to think. [As Basecamp puts it][basecamp-how]: “five people in a room for an hour isn't a one hour meeting, it's a **five hour** meeting”.
 
 That said, **face-time is important**. Learn Leap Fly has one regular
-meeting--the weekly standup--held every Monday. It's easy to start
+meeting: the weekly standup. It's easy to start
 feeling a lonely and isolated without laying eyes on your coworkers
 once in a while.
 
-If you do want to hold synchronous meetings (sparingly!), here's our advice:
+## On Meetings
+If you do want to hold synchronous meetings, here's our advice:
 
 * **Share the agenda in advance**. For regular meetings with a set
     agenda (e.g. Sprint Rollovers) it's sufficient to share the agenda
@@ -70,10 +71,13 @@ If you do want to hold synchronous meetings (sparingly!), here's our advice:
 * Use the **highest quality audio and video platform** you can
   afford.. We use zoom (which has easily the best multi-party video
   quality).
-* Make sure **everyone has good quality headphones and mics**.
+
+* Make sure **everyone has good quality headphones and mics**. Don't
+  skimp out here. Buy them for your employees if you can.
+
 * **Connect from someplace quiet**. No coffee shops. In a pinch, use a
     car, or even a closet. (but please, don't use a bathroom. that's
-    just... weird.)
+    just... gross.)
 * **Use one screen per person**. Even if more then one person happens
     to be working from the same space, require everyone to have an
     individual connection to the video chat. This puts everyone on the
@@ -82,6 +86,9 @@ If you do want to hold synchronous meetings (sparingly!), here's our advice:
     video-feed. One screen per person levels the playing field,
     letting everybody **feel like an equal contributor**, regardless
     of whether they are remote or local.
+* **Alternate meeting times** (if you can't find a time that fits everyone).
+  That way, it's not always the same people who are being left out
+* **Take and post meeting notes**. Rotate this responsibility to ensure everyone has a chance to participate at some point.
 
 ## On Email, Blogs, and Wikis
 
@@ -116,8 +123,8 @@ If you do want to hold synchronous meetings (sparingly!), here's our advice:
 
 ## Digital Watercoolers.
 
-Work isn't always just about working. Have places where people can
-interact and let off steam. At LLF, we have a #feeds channel in slack
+Work isn't always just about working. **Have places where people can
+interact informally** and let off steam. At LLF, we have a #feeds channel in slack
 so people can share interesting things they’re reading
 online. [Some companies][watercooler] have a #watercooler or #random
 channel for off-topic chat. The point is, people need to interact
@@ -135,12 +142,14 @@ at the sprint rollover.
 
 **Document your successes, and failures**. We have everyone write up
 a sprint report as part of our sprint rollovers. This is a little
-post that answers the following questions: What did you set out to
-do? What did you actually do? What’s blocking your progress? Are
-there any process changes that would help you? What’s your morale
-(1-10)?
+post that answers the following questions:
+* What did you set out to do?
+* What did you actually do?
+* What’s blocking your progress?
+* Are there any process changes that would help you?
+*  What’s your morale (1-10)?
 
-Organize sprints into **larger arcs**. Ours are roughly 3 months
+Finally, organize sprints into **larger arcs**. Ours are roughly 3 months
 long, after which we prepare a more detailed summary of what we
 accomplished and learned. Basecamp calls these checkins "heartbeats."
 The act of reflecting on a larger arc is really, really useful to keep
@@ -150,8 +159,8 @@ you from losing the forest in all those daily trees.
 ## For the Remote Worker
 
 Have a **dedicated personal work space**. Home offices are amazing for
-productivity. If you don't have room for an office, create a space
-that you only use for working.
+productivity. If you don't have room for an office, create a space somewhere in your house
+that you **only use for working**.
 
 Think about **ergonomics**. Invest in a properly set-up desk, a great
 chair, monitor stands, and a good keyboard. Companies like Automattic
@@ -221,7 +230,7 @@ No talk of remote work would be complete without mentioning the tools
 we use. Likely, every remote work scenario will use tools to implement
 at least the following functions.
 
-* Real-time team chat (e.g. Slack, Skype for Business, Mattermost) 
+* Real-time team chat (e.g. Slack, Skype for Business, Mattermost)
 * Shared valendar (Basecamp, Google Calendar)
 * Videoconferencing (Zoom, Google Hangouts, Skype)
 * Information Repository (MediaWiki, Notion, Confluence)
@@ -235,16 +244,10 @@ If you’re a technology shop, you’ll likely also need these:
 
 Here are some of our favourite tool combinations:
 
-* slack + mediawiki + zoom + trello + miro + google cal + notion + github/bitbucket
-
-Or:
-
-* Basecamp + zoom + slack + github
-
-Or:
-
-* Confluence + Bitbucket + Trello
-
+* The "Free Tier": slack + mediawiki + zoom + trello + miro + google cal + notion + github/bitbucket
+* The "All-in-one(ish)": Basecamp + zoom + slack + github
+* "The Atlassian": Confluence + Bitbucket + Trello + slack + zoom.
+* "The Self-Hoster": Mattermost + wordpress/P2 + MediaWiki + GitLab + zoom
 
 ## Tools we use but don’t want to talk about here
 
@@ -258,11 +261,11 @@ Or:
 
 ## Tools we don't use
 
-* **Ticketing* (e.g. Jira, Zendesk). We’re simply not in that
+* **Ticketing** (e.g. Jira, Zendesk). We’re simply not in that
     business.  Besides, that’s more of a business function than a
     remote-work enabler.
-* **Single Sign-on**. We use a password manager (1password) and generate unique random, strong passwords on every platform or website we use.
-* **Corporate email**. Hopefully you’re sold on the virtues of **not** using email for team communications. 
+* **Single Sign-on**. We use a password manager (1Password) and generate unique random, strong passwords on every platform or website we use.
+* **Corporate email**. Hopefully you’re sold on the virtues of **not** using email for team communications.
 
 [watercooler]: https://revelry.co/watercooler-channel/
 [automattic-coronavirus]: https://ma.tt/2020/03/coronavirus-remote-work/
