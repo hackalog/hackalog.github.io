@@ -86,9 +86,10 @@ If you do want to hold synchronous meetings, here's our advice:
     video-feed. One screen per person levels the playing field,
     letting everybody **feel like an equal contributor**, regardless
     of whether they are remote or local.
-* **Alternate meeting times** (if you can't find a time that fits everyone).
-  That way, it's not always the same people who are being left out
-* **Take and post meeting notes**. Rotate this responsibility to ensure everyone has a chance to participate at some point.
+* If you can't find a regular meeting time that fits everyone, **Alternate meeting times**.
+  That way, it's not always the same people who are being left out.
+* **Take and post meeting notes**. Rotate this responsibility to
+    ensure everyone has a chance to participate at some point.
 
 ## On Email, Blogs, and Wikis
 
