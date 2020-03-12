@@ -13,7 +13,7 @@ time. For those of us fortunate enough to be knowledge workers,
 working from home is pretty accessible. At Learn Leap Fly, we’ve been
 doing remote work since the company started in 2015. We built our
 model by borrowing heavily from companies with far more experienced
-than us (e.g. [automattic-culture][Automattic], [mozilla-best-practices][Mozilla], [basecamp-how][Basecamp]), and then iterating on
+than us (e.g. [Automattic][automattic-culture], [Mozilla][mozilla-best-practices], [Basecamp][basecamp-how]), and then iterating on
 those practices based on our own experiences.
 
 Here are some of the things we've learned, both from the perspective
@@ -49,8 +49,8 @@ organization has a *asynchronous most-of-the-time* communications
 culture. That is, if asynchronous means will get the job done, **do it
 asynchronously*. This means:
 
-**Don't hold a lot of meetings.** This is a [maker-schedule][general rule of thumb for
-  productive work], period. Use remote work as an opportunity to **break your meeting
+**Don't hold a lot of meetings.** This is a [general rule of thumb for
+  productive work][maker-schedule], period. Use remote work as an opportunity to **break your meeting
   habit**, and to develop more productive, asynchronous communications
   habits.
 
@@ -92,7 +92,7 @@ If you do want to hold synchronous meetings (sparingly!), here's our advice:
   platform** (e.g. blogs, wikis) for more permanent team
   communications.
 
-**Write things down**. [basecamp-how][Basecamp likes to say]:
+**Write things down**. [Basecamp likes to say][basecamp-how]:
   "Speaking only helps who’s in the room, writing helps everyone.”
   Think about the people who couldn't make it to a meeting, future
   employees or contractors, and even **future you**.
@@ -119,7 +119,7 @@ If you do want to hold synchronous meetings (sparingly!), here's our advice:
 Work isn't always just about working. Have places where people can
 interact and let off steam. At LLF, we have a #feeds channel in slack
 so people can share interesting things they’re reading
-online. [watercooler][Some companies] have a #watercooler or #random
+online. [Some companies][watercooler] have a #watercooler or #random
 channel for off-topic chat. The point is, people need to interact
 about things that aren’t mainline work (and this is a good thing).
 
