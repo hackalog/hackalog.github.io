@@ -42,19 +42,19 @@ that nurture and reflect the culture that you wish to have in your
 organization.
 
 
-## On Synchronous vs. Asynchronous Communication.
+## On Synchronous vs. Asynchronous Communication
 
 I'd go out on a limb and say that every successful remote-work
 organization has a **asynchronous most-of-the-time** communications
 culture. That is, if asynchronous means will get the job done, **do it
-asynchronously**. This means:
+asynchronously**. Practically speaking:
 
-**Don't hold a lot of meetings.** This is a [general rule of thumb for
+**Don't hold a meeting if you can do it another way.** This is a [general rule of thumb for
   productive work, period][maker-schedule]. Use remote work as an opportunity to **break your meeting
   habit**, and to develop more productive, asynchronous communications
   habits.
 
-**Recognize the true cost of meetings**. In addition to being hard to schedule (especially across timezones), synchronous meetings far more costly than anyone remembers to think. [As Basecamp puts it][basecamp-how]: “five people in a room for an hour isn't a one hour meeting, it's a **five hour** meeting”.
+**Recognize the true cost of meetings**. In addition to being hard to schedule (especially across timezones), synchronous meetings far more costly than anyone remembers to factor in. [As Basecamp puts it][basecamp-how]: “five people in a room for an hour isn't a one hour meeting, it's a **five hour** meeting”.
 
 That said, **face-time is important**. Learn Leap Fly has one regular
 meeting: the weekly standup. It's easy to start
@@ -69,14 +69,12 @@ If you do want to hold synchronous meetings, here's our advice:
     once. We keep them on our wiki, and evolve them over time as we
     need to.
 * Use the **highest quality audio and video platform** you can
-  afford.. We use zoom (which has easily the best multi-party video
+  afford. We use zoom (which has easily the best multi-party video
   quality).
-
 * Make sure **everyone has good quality headphones and mics**. Don't
   skimp out here. Buy them for your employees if you can.
-
 * **Connect from someplace quiet**. No coffee shops. In a pinch, use a
-    car, or even a closet. (but please, don't use a bathroom. that's
+    car, or even a closet. (But please, don't use a bathroom. That's
     just... gross.)
 * **Use one screen per person**. Even if more then one person happens
     to be working from the same space, require everyone to have an
@@ -86,7 +84,7 @@ If you do want to hold synchronous meetings, here's our advice:
     video-feed. One screen per person levels the playing field,
     letting everybody **feel like an equal contributor**, regardless
     of whether they are remote or local.
-* If you can't find a regular meeting time that fits everyone, **Alternate meeting times**.
+* If you can't find a regular meeting time that fits everyone, **alternate meeting times**.
   That way, it's not always the same people who are being left out.
 * **Take and post meeting notes**. Rotate this responsibility to
     ensure everyone has a chance to participate at some point.
@@ -201,7 +199,7 @@ someone starts slacking off.”  They don’t. The whole magic of a
 flexible work arrangement is that so long as you are meeting your
 objectives, we really don’t need to know how you’re doing
 it. Presumably, you already have mechanisms to review work, with
-performance reviews and the like. Trust them. if the performance
+performance reviews and the like. Trust them. If the performance
 reviews are broken, fix them. In the meantime, **trust your team members**.
 
 **Don't let your people work too much**. Ironically, with all the
@@ -232,7 +230,7 @@ we use. Likely, every remote work scenario will use tools to implement
 at least the following functions.
 
 * Real-time team chat (e.g. Slack, Skype for Business, Mattermost)
-* Shared valendar (Basecamp, Google Calendar)
+* Shared calendar (Basecamp, Google Calendar)
 * Videoconferencing (Zoom, Google Hangouts, Skype)
 * Information Repository (MediaWiki, Notion, Confluence)
 * Team blogging platform (Confluence, Wordpress)
@@ -272,25 +270,24 @@ Here are some of our favourite tool combinations:
 
 Don't take our word for it. Here is some good reading on the various topics covered in this post.
 
-* [Building Remote Office Culture with a Watercooler Channel][watercooler]
-* [Remote Work and the Coronavirus][automattic-coronavirus]
-* [Behind the scenes: culture and tools of remote work at Automattic][automattic-culture]
-* Basecamp's [How We Communicate][basecamp-how]
-* Extreme Remote Work: [Steven Wolfram's CEO Livestream][wolfram-livestream]
-* [Distributed with Matt Mullenweg][automattic-podcast] - Great podcast with Automattic's Founder
 * [Remote: Office Not Required][remote-book]
+* Basecamp's [How We Communicate][basecamp-how]
+* [Mozilla Best Practices][mozilla-best-practices]
+* [Remote Work and the Coronavirus][automattic-coronavirus]
+* [Distributed with Matt Mullenweg][automattic-podcast] - Great podcast with Automattic's Founder
+* [Behind the scenes: culture and tools of remote work at Automattic][automattic-culture]
+* [Building Remote Office Culture with a Watercooler Channel][watercooler]
+* Extreme Remote Work: [Steven Wolfram's CEO Livestream][wolfram-livestream]
 * Paul Graham on [The Maker's Schedule][maker-schedule]
 * [Auto-checkins in Basecamp][auto-checkins]
-* [Mozilla Best Practices][mozilla-best-practices]
 
-
+[remote-book]: https://basecamp.com/books/remote
 [watercooler]: https://revelry.co/watercooler-channel/
 [automattic-coronavirus]: https://ma.tt/2020/03/coronavirus-remote-work/
 [automattic-culture]: https://stephyiu.com/2019/02/17/behind-the-scenes-culture-and-tools-of-remote-work-at-automattic/
 [basecamp-how]: https://basecamp.com/guides/how-we-communicate
 [wolfram-livestream]: https://www.wired.com/story/what-do-i-do-all-day-livestreamed-technology-ceoing/
 [automattic-podcast]: podcasts.apple.com/us/podcast/distributed-with-matt-mullenweg/id1463243282
-[remote-book]: https://basecamp.com/books/remote
 [maker-schedule]: http://www.paulgraham.com/makersschedule.html
 [auto-checkins]: https://basecamp.com/features/checkins
 [mozilla-best-practices]: https://www.youtube.com/watch?v=83fk3RT8318
