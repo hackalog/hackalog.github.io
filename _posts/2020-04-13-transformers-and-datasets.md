@@ -3,12 +3,12 @@ layout: post
 title: Building the Dataset Hypergraph: Transformers and Datasets
 date: 2020-04-13
 categories: [python, reproducibility, easydata, hypergraph]
-excerpt: Easydata's Dataset dependency hypergraph, described
+excerpt: "Easydata's Dataset dependency hypergraph, described"
 permalink: /transformers-and-datasets/
 ---
-TL;DR: {{ post.excerpt }}
+TL;DR: Easydata's Dataset dependency hypergraph, described.
 
-### Hypergraph of Bipartite Graph?
+### Hypergraph or Bipartite Graph?
 
 For this post, I'm still talking about the hypergraph of data dependencies that I mentioned [last time], however for this discussion, I’ll switch from a hypergraph-based description to a bipartite graph-based description of the dependencies.
 

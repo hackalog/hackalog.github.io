@@ -6,7 +6,7 @@ categories: [python, reproducibility, easydata, hypergraph]
 excerpt: How the Dataset DAG became a hypergraph became the TransformerGraph.
 permalink: /transformer-graph/
 ---
-TL;DR: {{ post.excerpt }}
+TL;DR: How the Dataset DAG became a hypergraph became the TransformerGraph.
 
 ## TransformerGraph as a top-level object.
 
