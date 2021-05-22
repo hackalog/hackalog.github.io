@@ -4,7 +4,6 @@ title: Building a Dataset Dependency DAG for Easydata
 date: 2020-03-30
 categories: [python, reproducibility, easydata, hypergraph]
 excerpt: We thought we were building a graph of dependencies. Turns out we had a hypergraph.
-permalink: /dataset-dag/
 ---
 TL;DR: We thought we were building a graph of dependencies. Turns out we had a hypergraph.
 
@@ -32,6 +31,9 @@ and nodes would be `Dataset` objects. These could be easily pipelined together, 
 ### Well, DUH
 
 Unfortunately, when we started looking at our collection of real-world examples of transformer functions (see [reproallthethings]), we came to the conclusion that what we had wasn't a **directed graph** of data dependencies, it was a **directed hypergraph**, as our real-world collection of data transformations includes such functions as:
+
+[reproallthethings]: https:/github.com/acwooding/reproallthethings
+[easydata]: https://github.com/hackalog/easydata
 
 * `train-test-split`: takes as input a single dataset and produces two children: **one parent, two children**.
 * `augment-dataset`: takes as input two datasets and joins them along various axes: **two parents, one child**

@@ -4,7 +4,6 @@ title: Building the Dataset Hypergraph: Transformers and Datasets
 date: 2020-04-13
 categories: [python, reproducibility, easydata, hypergraph]
 excerpt: "Easydata's Dataset dependency hypergraph, described"
-permalink: /transformers-and-datasets/
 ---
 TL;DR: Easydata's Dataset dependency hypergraph, described.
 
