@@ -12,7 +12,7 @@ TL;DR: How the Dataset DAG became a hypergraph became the TransformerGraph.
 
 Recall from a [few weeks ago], I described a bipartite graph (or Hypergraph, now called a `TransformerGraph`) that describes how `Dataset` objects are generated.
 
-[few weeks ago]: /transformers-and-datasets/
+[few weeks ago]: /transformers-and-datasets
 
 One of the unintended consequences of introducing a `TransformerGraph` class in [Easydata] is that it turns out to be the right place to do a lot of things. That’s why we ended up exposing it to the user, instead of just using it internally to the `Dataset`.
 
