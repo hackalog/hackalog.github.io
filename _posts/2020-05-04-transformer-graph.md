@@ -5,7 +5,7 @@ date: 2020-05-04
 categories: [python, reproducibility, easydata, hypergraph]
 excerpt: Easydata 1.0 approaches. Caching is finicky, but magical when you get it right.
 ---
-TL;DR: Easydata 1.0 approaches. Caching is finicky, but magical when you get it right.
+TL;DR: {{ post.excerpt }}
 
 ## TransformerGraph as a top-level object.
 
