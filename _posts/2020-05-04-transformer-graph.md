@@ -3,7 +3,8 @@ layout: post
 title: Implementing the TransformerGraph
 date: 2020-05-04
 categories: [python, reproducibility, easydata, hypergraph]
-excerpt: Easydata 1.0 approaches. Caching is finicky, but magical when you get it right.
+excerpt: How the Dataset DAG became a hypergraph became the TransformerGraph.
+permalink: /transformer-graph/
 ---
 TL;DR: {{ post.excerpt }}
 
@@ -11,7 +12,7 @@ TL;DR: {{ post.excerpt }}
 
 Recall from a [few weeks ago], I described a bipartite graph (or Hypergraph, now called a `TransformerGraph`) that describes how `Dataset` objects are generated.
 
-[few weeks ago]: 2020-04-13-transformers-and-datasets.md
+[few weeks ago]: /transformers-and-datasets/
 
 One of the unintended consequences of introducing a `TransformerGraph` class in [Easydata] is that it turns out to be the right place to do a lot of things. That’s why we ended up exposing it to the user, instead of just using it internally to the `Dataset`.
 

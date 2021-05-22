@@ -1,8 +1,18 @@
+---
+layout: post
+title: Building the Dataset Hypergraph: Transformers and Datasets
+date: 2020-04-13
+categories: [python, reproducibility, easydata, hypergraph]
+excerpt: Easydata's Dataset dependency hypergraph, described
+permalink: /transformers-and-datasets/
+---
+TL;DR: {{ post.excerpt }}
+
 ### Hypergraph of Bipartite Graph?
 
 For this post, I'm still talking about the hypergraph of data dependencies that I mentioned [last time], however for this discussion, I’ll switch from a hypergraph-based description to a bipartite graph-based description of the dependencies.
 
-[last time]:2020-03-30-dataset-dag.md
+[last time]: /dataset-dag/
 
 Why? For starters, there's not necessarily a commonly accepted notion of a "directed hypergraph."
 When I use the term, I mean that a *directed hypergraph*, where the vertices of an edge are partitioned into two sets: the *head-set* and *tail-set* of the edge.

@@ -4,7 +4,9 @@ title: Building a Dataset Dependency DAG for Easydata
 date: 2020-03-30
 categories: [python, reproducibility, easydata, hypergraph]
 excerpt: We thought we were building a graph of dependencies. Turns out we had a hypergraph.
+permalink: /dataset-dag/
 ---
+TL;DR: {{ post.excerpt }}
 
 ## Building a Dataset Dependency DAG for Easydata
 
