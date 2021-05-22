@@ -2,7 +2,7 @@
 layout: post
 title: Cache is Magic
 date: 2020-05-06
-categories: [python, reproducibility, easydata, hypergraph]
+categories: [python, reproducibility, easydata, caching]
 excerpt: Caching is finicky, but magical when you get it right.
 permalink: /cache-magic/
 ---
