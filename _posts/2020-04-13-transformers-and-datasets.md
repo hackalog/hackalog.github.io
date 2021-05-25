@@ -47,7 +47,7 @@ Note that **transformers can take zero datasets as input** (but must produce at 
         ],
 }
 ```
-* **Data Conversion**: The data originates from something that isn’t a `Dataset` (e.g. a DataSource object), and the transformer converts it to a `Dataset`. This is really no different than the synthetic data case, except we supply a dataset_from_datasource() wrapper so the user doesn’t have to constantly reimplement it:
+* **Data Conversion**: The data originates from something that isn’t a `Dataset` (e.g. a DataSource object), and the transformer converts it to a `Dataset`. This is really no different than the synthetic data case, except we supply a `dataset_from_datasource()` wrapper so the user doesn’t have to constantly reimplement it:
 ```
     "datasource_edge": {
         "output_dataset: "ds_name",
@@ -82,7 +82,7 @@ One of the design goals of [Easydata] is that this processed dataset can be dele
 ### Dataset Metadata
 The master copy of the generated metadata is stored in the catalog file: `catalog/datasets.json`.
 
-`Dataset` metadata is fairly freeform. It is based on scikit-learn’s [Bunch] object (basically a dictionary where the keys can be accessed as attributes). This object typically contains 4 attributes: `.data`, `.target` (which is often None for unsupervised learning problems), `.metadata`, and `.hashes'. The latter contains a hash of all the non-`metadata` attributes of the `Dataset`; e.g.
+`Dataset` metadata is fairly freeform. It is based on scikit-learn’s [Bunch] object (basically a dictionary where the keys can be accessed as attributes). This object typically contains 4 attributes: `.data`, `.target` (which is often None for unsupervised learning problems), `.metadata`, and `.hashes`. The latter contains a hash of all the non-`metadata` attributes of the `Dataset`; e.g.
 ```
     "hashes": {
         "data":"sha1:d1d5ac9a5872e09b3a88618177dccc481df022d1",
