@@ -13,8 +13,8 @@ For this post, I'm still talking about the hypergraph of data dependencies that 
 
 [last time]: /dataset-dag
 
-Why? For starters, there's not necessarily a commonly accepted notion of a **directed hypergraph.
-When I use the term, I mean a hypergraph, where the vertices of an edge are partitioned into two sets: the *head-set* and *tail-set* of the edge.
+Why? For starters, there's not necessarily a commonly accepted notion of a **directed hypergraph**
+When I use the term, I mean a hypergraph, where the vertices of an edge are partitioned into two sets: the **head-set** and **tail-set** of the edge.
 
 It’s perhaps interesting (and often surprising) to note the constructs that appear when trying to describe data flow as a directed hypergraph. In our case, we often end up with a hypergraph where data originates from a transformer function (like when we have synthetic, or downloaded data). This leads to a directed hyperedge with **no input nodes**, only output nodes; i.e the head-set is empty, but the tail-set is not. What does one even call that. A **source edge**?
 
@@ -23,7 +23,7 @@ Anyway, to avoid some of these rabbit holes, we can switch to a **bipartite grap
 
 ### More on the Transformer Graph
 
-A `Transformer` function is a function that **takes in zero or more** `Dataset` objects, and **produces one or more** `Dataset` objects. While the functions themselves are stored in the source module (by default in `src/user/transformers.py`), metadata describing these functions and their inputs/outputs `Dataset` objects are serialized to the catalog file `catalog/transformers.json`.
+A `Transformer` function is a function that takes in **zero or more** `Dataset` objects, and produces **one or more** `Dataset` objects. While the functions themselves are stored in the source module (by default in `src/user/transformers.py`), metadata describing these functions and their inputs/outputs `Dataset` objects are serialized to the catalog file `catalog/transformers.json`.
 
 A `Dataset` is an on-disk object representing a point-in-time snapshot (a cached copy) of data and its associated metadata. The `Dataset` objects themselves are serialized to `data/processed`. Metadata about these objects are serialized to `catalog/datasets.json`.
 
