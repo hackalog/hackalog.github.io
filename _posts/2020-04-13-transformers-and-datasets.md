@@ -36,7 +36,7 @@ The whole goal of this exercise is to capture the information about the data tra
 ### Transformer Serialization
 Note that **transformers can take zero datasets as input** (but must produce at least one output). This special case occurs in one of two ways:
 
-* **Synthetic Data**": The data is synthetic, and the transformer is actually generates a `Dataset` object from scratch. The JSON in this case looks like:
+* **Synthetic Data**: The data is synthetic, and the transformer is actually generates a `Dataset` object from scratch. The JSON in this case looks like:
 ```
     "synthetic_source": {
         "output_dataset: "ds_name",
