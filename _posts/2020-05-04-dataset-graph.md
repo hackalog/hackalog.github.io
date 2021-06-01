@@ -4,7 +4,6 @@ title: Implementing the DatasetGraph
 date: 2020-05-04
 categories: [python, reproducibility, easydata, hypergraph]
 excerpt: How the Dataset DAG became a hypergraph became the TransformerGraph.
-permalink: /transformer-graph/
 ---
 TL;DR: How the Dataset DAG became a hypergraph became the DatasetGraph.
 
