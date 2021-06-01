@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Building a Dataset Dependency DAG for Easydata
+title: Building a Dataset Dependency Graph for Easydata
 date: 2020-03-30
 categories: [python, reproducibility, easydata, hypergraph]
 excerpt: We thought we were building a graph of dependencies. Turns out we had a hypergraph.
 ---
 TL;DR: We thought we were building a graph of dependencies. Turns out we had a hypergraph.
 
-## Building a Dataset Dependency DAG for Easydata
+## Building a Dataset Dependency Graph for Easydata
 
-I spent the last little bit working on really fun problem: dataset dependencies. One of our design goals for Easydata is to be able to start an analysis like this:
+One of our design goals for Easydata is to be able to start an analysis like this:
 
 ```
 >>>  ds = Dataset.load(f"covid-19-nlp-{date}", date="2020-04-01")
@@ -95,3 +95,5 @@ Of course, there are a few outstanding items from this litle brainstorm
 
 * Does the generalization of the transformer API actually work? Can they be chained together in the way I intend? It works in my head, but my head isn't Turing complete.
 * What's the hypergraph traversal algorithm; i.e. I want to give the list of transformer (hyperedges) traversed from sources to any named node in the graph. What's the directed hypergraph equivalent of the depth-first or breadth-first search here? Just do it on the complete bipartite graph and and stop when my list of nodes has been covered?
+
+Let's implement it and see.
