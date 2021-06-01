@@ -84,7 +84,8 @@ This will be serialized in the dataset catalog as:
 ```
 Notice that source nodes are actual 1-1 edges. This is convenient from an implementation perspective.
 
-In this abstraction, transformer functions become
+### The Transformer API
+Putting all this together, then, **transformer functions** are functions that takes in **zero or more** `Dataset` objects, and produces **one or more** `Dataset` objects, with the API:
 ```
 >>> def transformer(dsdict: Dict(str,Dataset), **kwargs) -> Dict(str,Dataset)
 ```
