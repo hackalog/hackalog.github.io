@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Implementing the TransformerGraph
+title: Implementing the DatasetGraph
 date: 2020-05-04
 categories: [python, reproducibility, easydata, hypergraph]
 excerpt: How the Dataset DAG became a hypergraph became the TransformerGraph.
 permalink: /transformer-graph/
 ---
-TL;DR: How the Dataset DAG became a hypergraph became the TransformerGraph.
+TL;DR: How the Dataset DAG became a hypergraph became the DatasetGraph.
 
-## TransformerGraph as a top-level object.
+## DatasetGraph as a top-level object.
 
-Recall from a [few weeks ago], I described a bipartite graph (or Hypergraph, now called a `TransformerGraph`) that describes how `Dataset` objects are generated.
+Recall from a [few weeks ago], I described a bipartite graph (or Hypergraph), now called a `DatasetGraph`, which describes how `Dataset` objects are generated from other `Dataset` objects. I originally named it a `TransformerGraph`, because that's how the directionality of the edges works out in the bipartite representation, but that turns out to be a little more confusing for the user. In the hypergraph, the `Dataset` objects are the nodes, so `DatasetGraph` it is.
 
 [few weeks ago]: /transformers-and-datasets
 
-One of the unintended consequences of introducing a `TransformerGraph` class in [Easydata] is that it turns out to be the right place to do a lot of things. That’s why we ended up exposing it to the user, instead of just using it internally to the `Dataset`.
+One of the unintended consequences of introducing a `DatasetGraph` class in [Easydata] is that it turns out to be the right place to do a lot of things. That’s why we ended up exposing it to the user, instead of just using it internally to the `Dataset`.
 
-Before we created the `TransformerGraph`, we used to have a top-level functions `add_transformer()` to add a dataset transformation to the global catalog. but it turns out a much more natural place to put it is in the `TransformerGraph` class directly.
+Before we created the `DatasetGraph`, we used to have a top-level functions `add_transformer()` to add a dataset transformation to the global catalog. but it turns out a much more natural place to put it is in the `DatasetGraph` class directly.
 
 Sticking with the “edges are functions, nodes are datasets” hypergraph terminology, the API becomes something like this"
 ```
->>> dag = TransformerGraph()
+>>> dag = DatasetGraph()
 
 >>> xp = create_transformer_pipeline([list, of, transformer, functions, or, partials, ...])
 

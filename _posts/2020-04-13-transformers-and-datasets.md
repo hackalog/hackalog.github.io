@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building the Dataset Hypergraph - Transformers and Datasets
+title: Building Transformers and Datasets
 date: 2020-04-13
 categories: [python, reproducibility, easydata, hypergraph]
 excerpt: The Easydata Dataset dependency hypergraph, described.
@@ -21,15 +21,13 @@ It’s perhaps interesting (and often surprising) to note the constructs that ap
 Anyway, to avoid some of these rabbit holes, we can switch to a **bipartite graph** representation of this construct. These representations (hypergraph, bipartite graph) are interchangable. To construct this bipartite graph, list the transformers (the hyper "edges") down one side of the page, Datasets (the hyper "nodes") down the other, and join them with directed edges to indicate data dependencies (**inbound edges** to a transformer are **input datasets**, **outbound edges are output datasets**).
 
 
-### More on the Transformer Graph
-
-A `Transformer` function is a function that takes in **zero or more** `Dataset` objects, and produces **one or more** `Dataset` objects. While the functions themselves are stored in the source module (by default in `src/user/transformers.py`), metadata describing these functions and their inputs/outputs `Dataset` objects are serialized to the catalog file `catalog/transformers.json`.
+### More on the Dataset Graph
 
 A `Dataset` is an on-disk object representing a point-in-time snapshot (a cached copy) of data and its associated metadata. The `Dataset` objects themselves are serialized to `data/processed`. Metadata about these objects are serialized to `catalog/datasets.json`.
 
-Recall that a `Transformer Graph` is a bipartite graph with two distinct sets of vertices—corresponding to `Dataset`s, and `Transformer`s as described above—that describes the transformation of data from data sources to a processed data set.
+A `Transformer` is a function that takes in **zero or more** `Dataset` objects, and produces **one or more** `Dataset` objects. While the functions themselves are stored in the source module (by default in `src/user/transformers.py`), metadata describing these functions and their inputs/outputs `Dataset` objects are serialized to the catalog file `catalog/transformers.json`.
 
-Edges are directed, indicating the direction of dependency. e.g. `output_datasets` depend on `input_datasets`, so arrows are directed from input to output.
+We'll define the `DatasetGraph` as the bipartite graph formed by the two distinct sets of vertices above: `Dataset` objects, and `Transformer` functions. The edges of this graph are directed, indicating the direction of dependency from the perspective of the `Transformer`; i.e. since `output_datasets` depend on `input_datasets` so arrows are directed from input `Dataset` objects to `Transformer` functions, and from `Transformer` functions to output `Dataset` objects.
 
 The whole goal of this exercise is to capture the information about the data transformations from raw data to processed data, **in a way that can be serialized to disk**, and committed as if it was code. These instructions are stored in the data catalog in JSON format. There is some trickiness here, as function objects don’t serialize in a platform-independent way, so we just some make assumptions about namespaces (we set up a standard location in the python module for user-generated functions: `src.user.*`), and use Python introspection to map the serialization to function objects when the pipeline is loaded.
 

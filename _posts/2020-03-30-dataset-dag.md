@@ -96,4 +96,4 @@ Of course, there are a few outstanding items from this litle brainstorm
 * Does the generalization of the transformer API actually work? Can they be chained together in the way I intend? It works in my head, but my head isn't Turing complete.
 * What's the hypergraph traversal algorithm; i.e. I want to give the list of transformer (hyperedges) traversed from sources to any named node in the graph. What's the directed hypergraph equivalent of the depth-first or breadth-first search here? Just do it on the complete bipartite graph and and stop when my list of nodes has been covered?
 
-Let's implement it and see.
+Let's [implement it and see](/transformers-and-datasets).
