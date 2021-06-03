@@ -9,7 +9,9 @@ TL;DR: API Lessons learned from a year of building (and using) Easydata
 
 After a year of using it, I'd say we got a lot of things right in [Easydata]. We made it to our 1.0 release last summer (introducing the `Dataset.load()` API), and, over the course of several workshops, hammered out a set of changes for working with large datsets (remote data and the EXTRA API), and private data.
 
-That said, we also got a few things wrong, and now it's time to go ahead and fix one of those things: making the catalog format more git-friendy. This is a breaking change, so this change will form the start of what will become Easydata 2.0, where we do some serious API cleanup.1
+[Easydata]: https://github.com/hackalog/easydata
+
+That said, we also got a few things wrong, and now it's time to go ahead and fix one of those things: making the catalog format more git-friendy. This is a breaking change, so this change will form the start of what will become Easydata 2.0, where we do some serious API cleanup.
 
 ## On-disk Catalog Format
 
