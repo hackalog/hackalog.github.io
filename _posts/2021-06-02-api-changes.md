@@ -5,13 +5,15 @@ date: 2020-06-03
 categories: [python, reproducibility, easydata]
 excerpt: A quick guide to the changes in Easydata 2
 ---
-As mentioned in the [last post], the upcoming Easydata 2.0 release is all about API and UX lessons we learned in the last year of uysing, and developing the Easydata framework.
-[last post]: /git-friendly-catalog
+As mentioned in the [last post], the upcoming Easydata 2.0 release is all about API and UX lessons we learned in the last year of using, and developing the Easydata framework.
+
+[last post]: /git-friendly-catalog/
 
 Since there are probably a few existing Easydata users out there, here's a quick guide to migrating to the new API.
 
 ## On-disk Catalog Format
 We completely changed the on-disk [catalog format]. But you knew that, because we wrote a whole blog post about it :)
+
 [catalog format]: /git-friendly-catalog
 
 ### Loading a Catalog
@@ -39,8 +41,8 @@ Basically, treat the catalog as a dict, and changes will be serialized to disk a
 ### Available catalog entries
 We used to have functions like `available_datasets()`, `available_transformers()`, `available_datasources()` but again, we now simply treat these as a dict, so
 
-Old: `if 'foo' in available_datasets() ...`
-New: `c = Catalog.load('datsets'); if 'foo' in c ...`
+* Old: `if 'foo' in available_datasets() ...`
+* New: `c = Catalog.load('datsets'); if 'foo' in c ...`
 
 Basically, treat the catalog as a dict.
 
