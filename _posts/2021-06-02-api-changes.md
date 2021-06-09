@@ -3,15 +3,10 @@ layout: post
 title: API Ch-ch-changes
 date: 2020-06-03
 categories: [python, reproducibility, easydata]
-excerpt: Migrating from Easydata1 to Easydata 2
+excerpt: A quick guide to the changes in Easydata 2
 ---
-TL;DR: API Lessons learned from a year of building (and using) Easydata
-
-After a year of using it, I'd say we got a lot of things right in [Easydata]. We made it to our 1.0 release last summer (introducing the `Dataset.load()` API), and, over the course of several workshops, hammered out a set of changes for working with large datsets (remote data and the EXTRA API), and private data.
-
-[Easydata]: https://github.com/hackalog/easydata
-
-That said, we also got a few things wrong, and now it's time to go ahead and fix most of those things. This is a breaking API change, so we're cranking the major and calling this release Easydata 2.0.
+As mentioned in the [last post], the upcoming Easydata 2.0 release is all about API and UX lessons we learned in the last year of uysing, and developing the Easydata framework.
+[last post]: /git-friendly-catalog
 
 Since there are probably a few existing Easydata users out there, here's a quick guide to migrating to the new API.
 
@@ -49,21 +44,33 @@ New: `c = Catalog.load('datsets'); if 'foo' in c ...`
 
 Basically, treat the catalog as a dict.
 
-### Eliminate the workflow module
+## Building Transformers
+
+One of our favourite new features is the ability to use a Jupyter Notebook in place of a transformer function.
+It's as easy as writing a Dataset to disk inside your notebook and then doing a:
+```
+dsdict = notebook_as_transformer(notebook_name='my_notebook.ipynb',
+                                 input_datasets=[ds_in],
+                                 output_datasets=[ds_out],
+                                 overwrite_catalog=True)
+```
+
+## Eliminating the workflow module
 
 The purpose of `src.workflow` has changed several times. In the end, we ended up using it as a place to test
 out new API ideas without exposing the details to the user. By the time we cut our Easydata 2 beta, this file was effectively empty, so it has returned to its original purpose (handling commands like "make datasets" and "make datasources").
 
 For the rest of the functions, that used to be there, import the module you want from easydata directly.
 
+```
 from src.data import Catalog, Dataset
 from src.helpers import (dataset_from_csv_manual_download,
                          dataset_from_metadata
                          dataset_from_single_function)
+```
+### Adding Dataset/Datasource to Catalog.
 
-### Add Dataset/Datasource to Catalog.
-
-To add a dataset or datasource to its respective catalog, use the "update_catalog()" method of the
+To add a dataset or datasource to its respective catalog, use the "update_catalog()` method of the
 Dataset / Datasource object respectively; e.g.
 
 ```
@@ -87,9 +94,9 @@ We introduced some Easydata-specific exceptions. We had previously been using ge
 * NotFoundError: object not found in object store (more general than a FileNotFound Error)
 
 
-### Eliminate "force" flags and other misnamed options
+### "force" flags and other misnamed options
 `force` was a terrible name for an option flag, as it meant something slightly different
-to every function, leading to some odd bugs. It has been replaced
+to every function, leading to some odd bugs. It has been replaced in most cases with a clearer name:
 
 * `Dataset.dump(force=True)` -> `Dataset.dump(exists_ok=True)`
 * `DatasetGraph.traverse()`: `force` -> `exhaustive`
@@ -103,8 +110,13 @@ We also cleaned up some other misnamed options:
 
 ### Adding Datasets
 `src.data.add_dataset()` is deprecated. It had two forms:
-** From the dataset itself: Now `dataset.update_catalog()` (which can be handled by `update_catalog`)
-** Using the `from_datasource` option: Now `Dataset.from_datasource()`
+* From the dataset itself: Now `dataset.update_catalog()` (which can be handled by `update_catalog`)
+* Using the `from_datasource` option: Now `Dataset.from_datasource()`
 
 ### Changing the log level
-`src.log.debug` is now gone (it did not work correctly). Set the LOGLEVEL environment variable instead.
+`src.log.debug` is now gone (it did not work correctly anyway). Set the `LOGLEVEL` environment variable instead.
+
+
+I'm sure there are many other changes I forgot about, but these should get you going. (and the [Easydata documentation] and docstrings should get you the rest of the way!)
+
+[easydata documentation]: https://cookiecutter-easydata.readthedocs.io
