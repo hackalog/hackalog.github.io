@@ -53,12 +53,11 @@ Since there's probably a few older Easydata repos out there, here's a quick guid
 * Old: `load_catalog(catalog_name)`
 * New: `Catalog.load(catalog_name)`
 
-In addition, we had defined some helpful (partial) functions to load these; i.e.
+Previously, we had defined some helpful (partial) functions to load these; i.e.
 
 * `dataset_catalog = partial(load_catalog, catalog_file='datasets.json')  # Old way`
 * `transformer_catalog = partial(load_catalog, catalog_file='transformers.json') # Old way`
 * `datasource_catalog = partial(load_catalog, catalog_file='datasources.json') # Old way`
-
 
 We've deprecated them, because the new form is just as clear:
 
@@ -83,12 +82,14 @@ Basically, treat the catalog as a dict.
 ### Eliminate the workflow module
 
 The purpose of `src.workflow` has changed several times. In the end, we ended up using it as a place to test
-out new API ideas without exposing the details to the user. By the time we cut our Easydata 2 beta, this file was effectively empty, so we eliminated it for now. Instead, import the module you want from easydata directly.
+out new API ideas without exposing the details to the user. By the time we cut our Easydata 2 beta, this file was effectively empty, so it has returned to its original purpose (handling commands like "make datasets" and "make datasources").
+
+For the rest of the functions, that used to be there, import the module you want from easydata directly.
 
 from src.data import Catalog, Dataset
-from src.data.helpers import (dataset_from_csv_manual_download,
-                              dataset_from_metadata
-                              dataset_from_single_function)
+from src.helpers import (dataset_from_csv_manual_download,
+                         dataset_from_metadata
+                         dataset_from_single_function)
 
 ### Add Dataset/Datasource to Catalog.
 
@@ -101,6 +102,8 @@ ds = Dataset('new_dataset_name')
 ds.update_catalog()
 ```
 
+The same works for DataSource objects.
+
 ### Renamed API Calls
 
 * `TransformerGraph` is now `DatasetGraph`
@@ -108,14 +111,31 @@ ds.update_catalog()
 
 ### New Exceptions
 We introduced some Easydata-specific exceptions. We had previously been using generic ones.
+* EasydataError: base for all other exceptions
+* ValidationError: hash check failed
+* ObjectCollision: object already exists in object store (more general than a FileExistsError)
+* NotFoundError: object not found in object store (more general than a FileNotFound Error)
 
 
-### Still to-do
+### Eliminate "force" flags and other misnamed options
+`force` was a terrible name for an option flag, as it meant something slightly different
+to every function, leading to some odd bugs. It has been replaced
 
-Easydata 2 is still in beta, as there's still some API cleanup to come. In particular:
+* `Dataset.dump(force=True) -> Dataset.dump(exists_ok=True)`
 
-* `add_dataset()` should be deprecated. It has two forms:
-** From the dataset itself (which can be handled by `update_catalog`)
-** `from_datasource`, which can be a helper in `src.data.helpers`.
+* `DatasetGraph.traverse()`: `force` -> `exhaustive`
+* DatasetGraph.generate() force->exhaustive
+* DatasetGraph.add_source(): force->overwrite_catalog
+* DatasetGraph.add_edge(): force->overwrite_catalog
 
-* `.update_catalog()` should be write_catalog or add_to_catalog. Or both, where `add_to_catalog` would set the `create` flag, and `update` would by default omit it.
+We also cleaned up some other misnamed options:
+* DatasetGraph.generate() write_catalog->write_dataset
+* DatasetGraph.process_edge() write_catalog->write_datsets
+
+### Adding Datasets
+`src.data.add_dataset()` is deprecated. It had two forms:
+** From the dataset itself: Now `dataset.update_catalog()` (which can be handled by `update_catalog`)
+** Using the `from_datasource` option: Now `Dataset.from_datasource()`
+
+### Changing the log level
+`src.log.debug` is now gone (it did not work correctly). Set the LOGLEVEL environment variable instead.
