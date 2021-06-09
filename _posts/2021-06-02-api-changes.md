@@ -1,7 +1,7 @@
 ---
 layout: post
 title: API Ch-ch-changes
-date: 2020-06-03
+date: 2021-06-02
 categories: [python, reproducibility, easydata]
 excerpt: A quick guide to the changes in Easydata 2
 ---

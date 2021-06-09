@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Making a git-friendly Catalog Format
-date: 2020-06-03
-categories: [python, reproducibility, easydata]
+date: 2021-05-25
+categories: [python, reproducibility, easydata, git]
 excerpt: API Lessons learned from a year of building (and using) Easydata
 ---
 TL;DR: API Lessons learned from a year of building (and using) Easydata
