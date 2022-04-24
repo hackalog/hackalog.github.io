@@ -1,9 +1,9 @@
 ---
 title: "Adding Moneydance Transactions with Jython"
 date: "2015-04-13"
-categories: 
+categories:
   - "software"
-tags: 
+tags:
   - "finances"
   - "jython"
   - "moneydance"
@@ -40,14 +40,30 @@ Needless to say, it's a bit minimal. But, with a genuine need at hand (several h
 
 Three hours of paranoid experimentation followed (this **is** my finances database, after all), in which I arrived at this piece of code:
 
-\[sourcecode language="python"\] import time from com.moneydance.apps.md.model import ParentTxn, SplitTxn, AbstractTxn
+```python
+import time
+from com.moneydance.apps.md.model import ParentTxn, SplitTxn, AbstractTxn
 
-ra = moneydance.getRootAccount() visa\_acct = ra.getAccountByName("Visa") misc\_acct = ra.getAccountByName("Miscellaneous")
+ra = moneydance.getRootAccount()
+visa_acct = ra.getAccountByName("Visa")
+misc_acct = ra.getAccountByName("Miscellaneous")
 
-desc="test desc" memo="test memo" amt = 6502 # i.e. $65.02 # Create a date in epoch format t = (2015, 4, 10, 12, 0, 0, 0, 0, 0) secs = time.mktime( t ) txdate = long(secs\*1000)
+desc="test desc"
+memo="test memo"
+amt = 6502 # i.e. $65.02
+# Create a date in epoch format
+t = (2015, 4, 10, 12, 0, 0, 0, 0, 0)
+secs = time.mktime( t )
+txdate = long(secs*1000)
 
-new\_txn = ParentTxn(txdate, txdate, txdate, "", visa\_acct, desc, memo, -1, ParentTxn.STATUS\_UNRECONCILED) new\_txn.setTransferType(AbstractTxn.TRANSFER\_TYPE\_BANK) txnSplit = SplitTxn(new\_txn, amt, amt, 1.0, misc\_acct, desc, -1, AbstractTxn.STATUS\_UNRECONCILED ) new\_txn.addSplit(txnSplit) print new\_txn ra.getTransactionSet().addNewTxn(new\_txn)
+new_txn = ParentTxn(txdate, txdate, txdate, "", visa_acct, desc, memo, -1, ParentTxn.STATUS_UNRECONCILED)
+new_txn.setTransferType(AbstractTxn.TRANSFER_TYPE_BANK)
+txnSplit = SplitTxn(new_txn, amt, amt, 1.0, misc_acct, desc, -1, AbstractTxn.STATUS_UNRECONCILED  )
+new_txn.addSplit(txnSplit)
+print new_txn
+ra.getTransactionSet().addNewTxn(new_txn)
 
-ra.refreshAccountBalances() \[/sourcecode\]
+ra.refreshAccountBalances()
+```
 
 Which, to the best that I can see, worked. (here, the best that I can see = I have been running moneydance for a day since importing my transactions, and nothing has yet blown up. I set a high bar, I know...)
