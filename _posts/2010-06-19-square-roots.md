@@ -28,7 +28,7 @@ To simplify things, when we talk about base 10, we will drop the subscript $k$.
 
 Now think about squaring a two-digit base-10 integer:
 
-$ \{ab\}^2 = (10a + b)^2 = 100a^2 + 20ab + b^2$
+$ \\{ab\\}^2 = (10a + b)^2 = 100a^2 + 20ab + b^2$
 
 A rough approximation, then, would be to guess at the first digit, $ a$, and then choose an appropriate $ b$ from the above formula. By iterating this process over successively accurate choices for $ a$, we eventually reach a solution.
 
