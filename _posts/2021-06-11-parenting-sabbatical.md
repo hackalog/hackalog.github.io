@@ -6,9 +6,7 @@ categories: [python, reproducibility, easydata]
 excerpt: A quick summary of my 6-week return-to-work.
 ---
 
-## I'm heading back on leave.
-
-On Monday, I go back on Parental Leave. After my experiences with my first pat-leave, I decided to take a split leave this time around, coming back to work for 6 weeks in the middle. I chose May, as there are a number of workshops and events around then that affect research planning for the course of the year, so it's **really** nice to be able to participate in them.
+For 6 weeks now, I've been on a parenting sabbatical; that is, I split my 9-month Parental Leave into two parts, separated by a 6-week "return to work". On Monday, my work is done, and I go back on Parental Leave.
 
 It took some serious logistics (a certain pandemic wiped out my original childcare plans), but I think I got some really great work done. Not only did I finish up old work, I feel like I've been able to at least dip my toe into the current research problems, which will make coming back in November all that much easier.
 
@@ -22,7 +20,7 @@ Back in February, Amy and I presented our summary of Reproducibility research in
 
 In the last 6 weeks, I focused heavily on implementing the "individual data scientist" improvements outlined in that talk. Particularly:
 * Improving the [Catalog] object: Implementing a more git-friendly catalog format
-* Implementing [Notebook-as-transformer]: i.e. the ability to use notebooks as nodes in the DatasetGraph. This allows an analyst to ceate a `Dataset` in a jupyter notebook (complete with all the storytelling that comes along with that format), and have that notebook be used automatically to regenerate the Dataset as part of the usual "Dataset.load()" dependency traversal mechanism (i.e. as a **transformer** in the DatasetGraph).
+* Implementing **notebook-as-transformer**: i.e. the ability to use notebooks as nodes in the `DatasetGraph`. This allows an analyst to ceate a `Dataset` in a jupyter notebook (complete with all the storytelling that comes along with that format), and have that notebook be used automatically to regenerate the Dataset as part of the usual `Dataset.load()` dependency traversal mechanism (i.e. as a **transformer** in the `DatasetGraph`).
 
 This has set up some good opportunities to use the improved framework both immediately, and in the upcoming months:
 
