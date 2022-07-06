@@ -25,7 +25,7 @@ In the last 6 weeks, I focused heavily on implementing the "individual data scie
 This has set up some good opportunities to use the improved framework both immediately, and in the upcoming months:
 
 * Amy's preparing a set of tutorial notebooks for the [Vectorizers Playground].
-* Amy's presenting an [Eastydata tutorial], and I'm giving a talk on the [Easydata Makefile workflow] at this year's Pydata Global.
+* Amy's presenting an [Easydata tutorial], and I'm giving a talk on the [Easydata Makefile workflow] at this year's Pydata Global.
 * Easydata will be driving the git repos for a number of upcoming workshops and research events (details to come).
 
 [Vectorizers Playground]: https://github.com/acwooding/vectorizers_playground
