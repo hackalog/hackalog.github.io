@@ -18,7 +18,7 @@ Back in February, Amy and I presented our summary of Reproducibility research in
 
 ![Our 2021 Easydata Roadmap](images/easydata2022/edreview-2021-goals.png)
 
-In the last 6 weeks, I focused heavily on implementing the "individual data scientist" improvements outlined in that talk. Particularly:
+In the last 6 weeks, I focused heavily on implementing the "Streamline Workgroup Sharing" improvements outlined in that talk. Particularly:
 * Improving the [Catalog] object: Implementing a more git-friendly catalog format
 * Implementing **notebook-as-transformer**: i.e. the ability to use notebooks as nodes in the `DatasetGraph`. This allows an analyst to ceate a `Dataset` in a jupyter notebook (complete with all the storytelling that comes along with that format), and have that notebook be used automatically to regenerate the Dataset as part of the usual `Dataset.load()` dependency traversal mechanism (i.e. as a **transformer** in the `DatasetGraph`).
 

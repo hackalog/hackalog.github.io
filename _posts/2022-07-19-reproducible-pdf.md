@@ -4,6 +4,7 @@ title: Reproducible PDFs
 date: 2022-07-19
 categories: [pdf, reproducibility]
 excerpt: Reproducibly generating a PDF from the same source file can't possibly be a hard problem, can it?
+use-math: true
 ---
 
 # Reproducible PDFs
@@ -28,7 +29,7 @@ It also feels (maybe this is just my own bias) more reliable converting from mar
 
 ## The Problem
 
-```
+``` bash
 >>> make clean && make && md5 document.pdf
 MD5 (document.pdf) = fdfeefe8eb0df92162342271ad4cacc2
 >>> make clean && make && md5 document.pdf
@@ -41,7 +42,7 @@ Basically, every time the PDF is generated, the hash is different. That's a litt
 
 Of course, there's no guarantee the PDF is the culprit, so before digging in that grave, I should check the generation upstream:
 
-```
+```bash
 >>> make clean && make document.tex && cp document.tex orig.tex
 >>> make clean && make document.tex && cp document.tex next.tex
 >>> diff orig.txt next.txt
@@ -50,7 +51,7 @@ No output, so the generated $\TeX$ is the same. A good start.
 
 Next, check the file sizes (yeah, I probably should have done this first):
 
-```
+```bash
 >>> make clean && make && mv document.pdf orig.pdf
 >>> make clean && make && mv document.pdf next.pdf
 >>> ls -la *.pdf
@@ -61,8 +62,8 @@ Okay, so there's a good chance the bulk of those files are identical.
 Since the upstream contents are the same, I assume it's some kind of metadata difference.
 Sure enough, [stackoverflow confirms][tfa] that these three fields are to blame:
 
-+ `/CreationDate` (D:20150222233514Z)
-+ `/ModDate` (D:20150222233514Z)
++ `/CreationDate`
++ `/ModDate`
 + `/ID`
 
 [tfa]: https://tex.stackexchange.com/questions/229605/reproducible-latex-builds-compile-to-a-file-which-always-hashes-to-the-same-va
@@ -73,8 +74,8 @@ Two of these are easy to fix, by hardcoding something reasonable into the `SOURC
 
 [xxd]: https://github.com/vim/vim/blob/master/src/xxd/xxd.c
 
-```
-% diff <(xxd document-1.pdf) <(xxd document.pdf)
+```bash
+>>> diff <(xxd document-1.pdf) <(xxd document.pdf)
 418936,418940c418936,418940
 < 00664770: 662f 4944 5b3c 3935 3361 3763 3266 6531  f/ID[<953a7c2fe1
 < 00664780: 3363 3431 3139 3231 6236 3265 6635 3065  3c411921b62ef50e
@@ -89,7 +90,7 @@ Two of these are easy to fix, by hardcoding something reasonable into the `SOURC
 > 006647b0: 6539 6363 3734 3434 3e5d 2f52 6f6f 740a  e9cc7444>]/Root.
 ```
 
-That's annoying. The ID changes every time. According to the [stackoverflow answer][tfa], there is a solution, but it depends on which pdf backend is compiling the $\LaTeX$. I suppose I can patch the [eisvogel.tex] template I'm using to generate the book, and add someting to the $\TeX$ header. Technically, I only use [xetex], but so I don't have to look it up again, I'll put it all in:
+That's annoying. The ID changes every time. According to the [aforementioned stackoverflow answer][tfa], there is a solution, but it depends on which pdf backend is compiling the $\LaTeX$. I suppose I can patch the [eisvogel.tex] template I'm using to generate the book, and add someting to the $\TeX$ header. Technically, I only use [xetex], but so I don't have to look it up again, I'll put it all in:
 
 ```TeX
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftexe
@@ -110,15 +111,17 @@ That's annoying. The ID changes every time. According to the [stackoverflow answ
 
 And now finally, my PDF generation is reproducible.
 
-```
+```mash
 >>> make clean && make && mv document.pdf orig.pdf
 >>> make clean && make && mv document.pdf next.pdf
 >>> md5 *.pdf
 MD5 (next.pdf) = c3bf99530a35eab6f9adafb08c24acbd
 MD5 (orig.pdf) = c3bf99530a35eab6f9adafb08c24acbd
-
 ```
+
 That wasn't so hard, was it?
+
+(yikes).
 
 [exiftool]: https://exiftool.org/
 [xetex]: https://tug.org/xetex/
