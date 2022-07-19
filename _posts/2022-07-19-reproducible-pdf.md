@@ -4,7 +4,7 @@ title: Reproducible PDFs
 date: 2022-07-19
 categories: [pdf, reproducibility]
 excerpt: Reproducibly generating a PDF from the same source file can't possibly be a hard problem, can it?
-use-math: true
+use_math: true
 ---
 
 # Reproducible PDFs
@@ -111,7 +111,7 @@ That's annoying. The ID changes every time. According to the [aforementioned sta
 
 And now finally, my PDF generation is reproducible.
 
-```mash
+```bash
 >>> make clean && make && mv document.pdf orig.pdf
 >>> make clean && make && mv document.pdf next.pdf
 >>> md5 *.pdf
