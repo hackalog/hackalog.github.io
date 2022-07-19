@@ -7,20 +7,16 @@ excerpt: Reproducibly generating a PDF from the same source file can't possibly 
 use_math: true
 ---
 
-# Reproducible PDFs
+I got stuck in a rabbit hole today, and it was this: **Can I reproducibly generate a PDF?**
 
-I got stuck in a rabbit hole today, and it was this:
-
-> Can I reproducibly generate a PDF?
-
-I mean, starting from the same input document (a markdown document, in this case), can I get the _same_ PDF out?
+I mean, starting from the same input document (a markdown document, in this case), can I get the same PDF out?
 That can't possibly be a hard problem, can it?
 
-Short answer: it's a lot harder than I thought.
+Short answer: *it's a lot harder than I thought.*
 
 ## The Pipeline
 
-We generate our pdf using [pandoc] from a set of markdown source files. It's an academic paper, so there's a mix of filters in there: latex for equations, [pandoc-crossref] for intra-document references, and citeproc (bibtex) for citations and references. It's also multilingual, so we throw [xetex] into the mix. It may seem like a crazy way to do it (you may ask, _why not just use pure LaTeX?_) but the result is an easy-to-edit, easy-to-diff document that can be easily maintained (_and_ viewed) in github.
+We generate our PDF using [pandoc] from a set of markdown source files. It's an academic paper, so there's a mix of filters in there: latex for equations, [pandoc-crossref] for intra-document references, and citeproc (bibtex) for citations and references. It's also multilingual, so we throw [xetex] into the mix. It may seem like a crazy way to do it (you may ask, _why not just use pure LaTeX?_) but the result is an easy-to-edit, easy-to-diff document that can be easily maintained (_and_ viewed) in GitHub.
 
 [pandoc]: https://pandoc.org/
 [pandoc-crossref]: https://github.com/lierdakil/pandoc-crossref
@@ -36,7 +32,7 @@ MD5 (document.pdf) = fdfeefe8eb0df92162342271ad4cacc2
 MD5 (document.pdf) = 90360b00c4f1ef08e57135e6b866e392
 ```
 
-Basically, every time the PDF is generated, the hash is different. That's a little embarassing for a guy who does reproducibility research. I need to fix that.
+Basically, every time the PDF is generated, the hash is different. That's a little embarrassing for a guy who does reproducibility research. I need to fix that.
 
 ## The Fix
 
@@ -68,7 +64,7 @@ Sure enough, [stackoverflow confirms][tfa] that these three fields are to blame:
 
 [tfa]: https://tex.stackexchange.com/questions/229605/reproducible-latex-builds-compile-to-a-file-which-always-hashes-to-the-same-va
 
-Two of these are easy to fix, by hardcoding something reasonable into the `SOURCE_DATE_EPOCH` environment variable before running `pandoc`. (like the suggested output of `date +%s`). According to [exiftool], the creation and modification dates now match. I can add that to the `Makefile`. Unfortunately, that's not enough.
+Two of these are easy to fix, by hard-coding something reasonable into the `SOURCE_DATE_EPOCH` environment variable before running `pandoc`. (like the suggested output of `date +%s`). According to [exiftool], the creation and modification dates now match. I can add that to the `Makefile`. Unfortunately, that's not enough.
 
  Annoyingly, `exiftool` doesn't seem to give me the `ID` field. Time to get dirty. (I'm actually impressed I made it this far without a [hex dump][xxd]).
 
@@ -90,7 +86,7 @@ Two of these are easy to fix, by hardcoding something reasonable into the `SOURC
 > 006647b0: 6539 6363 3734 3434 3e5d 2f52 6f6f 740a  e9cc7444>]/Root.
 ```
 
-That's annoying. The ID changes every time. According to the [aforementioned stackoverflow answer][tfa], there is a solution, but it depends on which pdf backend is compiling the $\LaTeX$. I suppose I can patch the [eisvogel.tex] template I'm using to generate the book, and add someting to the $\TeX$ header. Technically, I only use [xetex], but so I don't have to look it up again, I'll put it all in:
+That's annoying. The ID changes every time. According to the [aforementioned stackoverflow answer][tfa], there is a solution, but it depends on which PDF backend is compiling the $\LaTeX$. I suppose I can patch the [eisvogel.tex] template I'm using to generate the book, and add something to the $\TeX$ header. Technically, I only use [xetex], but so I don't have to look it up again, I'll put it all in:
 
 ```TeX
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftexe
