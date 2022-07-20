@@ -9,14 +9,14 @@ use_math: true
 
 I got stuck in a rabbit hole today, and it was this: **Can I reproducibly generate a PDF?**
 
-I mean, starting from the same input document (a markdown document, in this case), can I get the same PDF out?
+I mean, starting from the same input document (a markdown document), can I get the same PDF out?
 That can't possibly be a hard problem, can it?
 
 Short answer: *it's a lot harder than I thought.*
 
 ## The Pipeline
 
-We generate our PDF using [pandoc] from a set of markdown source files. It's an academic paper, so there's a mix of filters in there: latex for equations, [pandoc-crossref] for intra-document references, and citeproc (bibtex) for citations and references. It's also multilingual, so we throw [xetex] into the mix. It may seem like a crazy way to do it (you may ask, _why not just use pure LaTeX?_) but the result is an easy-to-edit, easy-to-diff document that can be easily maintained (_and_ viewed) in GitHub.
+We generate our PDF using [pandoc] from a set of markdown source files. It's an academic paper, so there's a mix of filters in there: latex for equations, [pandoc-crossref] for intra-document references, and citeproc (bibtex) for citations and references. It's also multilingual, so we throw [xetex] into the mix. It may seem like a crazy way to do it, but the result is an easy-to-edit, easy-to-diff document that can be easily maintained (_and_ viewed) in GitHub by a wide variety of people.
 
 [pandoc]: https://pandoc.org/
 [pandoc-crossref]: https://github.com/lierdakil/pandoc-crossref
@@ -24,6 +24,8 @@ We generate our PDF using [pandoc] from a set of markdown source files. It's an 
 It also feels (maybe this is just my own bias) more reliable converting from markdown to other document formats, so when a client asks for, say,  a Word document to send for translation, we can easily do the conversion and expect that everything will render properly.
 
 ## The Problem
+
+I can't generate the same PDF twice.
 
 ``` bash
 >>> make clean && make && md5 document.pdf
@@ -34,9 +36,7 @@ MD5 (document.pdf) = 90360b00c4f1ef08e57135e6b866e392
 
 Basically, every time the PDF is generated, the hash is different. That's a little embarrassing for a guy who does reproducibility research. I need to fix that.
 
-## The Fix
-
-Of course, there's no guarantee the PDF is the culprit, so before digging in that grave, I should check the generation upstream:
+Now, there's no guarantee the PDF is the culprit, so before digging in that grave, I should check the generation upstream:
 
 ```bash
 >>> make clean && make document.tex && cp document.tex orig.tex
@@ -45,7 +45,7 @@ Of course, there's no guarantee the PDF is the culprit, so before digging in tha
 ```
 No output, so the generated $\TeX$ is the same. A good start.
 
-Next, check the file sizes (yeah, I probably should have done this first):
+Next, check the file sizes:
 
 ```bash
 >>> make clean && make && mv document.pdf orig.pdf
@@ -56,7 +56,10 @@ Next, check the file sizes (yeah, I probably should have done this first):
 ```
 Okay, so there's a good chance the bulk of those files are identical.
 Since the upstream contents are the same, I assume it's some kind of metadata difference.
-Sure enough, [stackoverflow confirms][tfa] that these three fields are to blame:
+
+## The Fix
+
+It's metadata. [Stackoverflow confirms][tfa] that these three fields are to blame:
 
 + `/CreationDate`
 + `/ModDate`
@@ -66,7 +69,7 @@ Sure enough, [stackoverflow confirms][tfa] that these three fields are to blame:
 
 Two of these are easy to fix, by hard-coding something reasonable into the `SOURCE_DATE_EPOCH` environment variable before running `pandoc`. (like the suggested output of `date +%s`). According to [exiftool], the creation and modification dates now match. I can add that to the `Makefile`. Unfortunately, that's not enough.
 
- Annoyingly, `exiftool` doesn't seem to give me the `ID` field. Time to get dirty. (I'm actually impressed I made it this far without a [hex dump][xxd]).
+ Annoyingly, `exiftool` doesn't let me view the `ID` field. Time to get dirty. (I'm actually impressed I made it this far without a [hex dump][xxd]).
 
 [xxd]: https://github.com/vim/vim/blob/master/src/xxd/xxd.c
 
@@ -86,7 +89,7 @@ Two of these are easy to fix, by hard-coding something reasonable into the `SOUR
 > 006647b0: 6539 6363 3734 3434 3e5d 2f52 6f6f 740a  e9cc7444>]/Root.
 ```
 
-That's annoying. The ID changes every time. According to the [aforementioned stackoverflow answer][tfa], there is a solution, but it depends on which PDF backend is compiling the $\LaTeX$. I suppose I can patch the [eisvogel.tex] template I'm using to generate the book, and add something to the $\TeX$ header. Technically, I only use [xetex], but so I don't have to look it up again, I'll put it all in:
+As I feared, the ID changes every time. According to the [aforementioned stackoverflow answer][tfa], there is a solution, but it depends on which PDF backend is compiling the $\LaTeX$. I suppose I can patch the [eisvogel.tex] template I'm using to generate the book, and add something to the $\TeX$ header. Technically, I only use [xetex], but so I don't have to look it up again, I'll put it all in:
 
 ```TeX
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftexe
@@ -105,7 +108,7 @@ That's annoying. The ID changes every time. According to the [aforementioned sta
 \fi
 ```
 
-And now finally, my PDF generation is reproducible.
+And voila, my PDF generation is reproducible.
 
 ```bash
 >>> make clean && make && mv document.pdf orig.pdf
