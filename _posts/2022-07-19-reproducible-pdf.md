@@ -7,73 +7,71 @@ excerpt: Reproducibly generating a PDF from the same source file can't possibly 
 use_math: true
 ---
 
-I got stuck in a rabbit hole today, and it was this: **Can I reproducibly generate a PDF?**
+For the last few weeks, I've been putting the final touches on a research report, intended to be published both as a print (like, *dead-tree*) publication, and as a digital artifact (PDF, including the sources needed to generate it.)
 
-I mean, starting from the same input document (a markdown document), can I get the same PDF out?
-That can't possibly be a hard problem, can it?
+It's been a lot of back-and-forth, but we're finally at the point of production. As I happily regenerated the PDF to send to the printer "one last time" (`book-final-edited-fix2-AGAIN-reallyfinal-ugh.pdf`), I noticed something odd. I kept getting git conflicts with the PDF, even when the source material wasn't changing. (I don't usually check generated files into git, but this particular PDF, being the main output of the project in question, seemed like a reasonable exception to my rule).
 
-Short answer: *it's a lot harder than I thought.*
+## Down The Rabbit Hole
 
-## The Pipeline
+In hunting for the source of these git conflicts,  I unwittingly fell down a reproducibility rabbit hole with my PDF generation:  **Can I reproducibly generate a PDF from an unchanging source document?**
 
-We generate our PDF using [pandoc] from a set of markdown source files. It's an academic paper, so there's a mix of filters in there: latex for equations, [pandoc-crossref] for intra-document references, and citeproc (bibtex) for citations and references. It's also multilingual, so we throw [xetex] into the mix. It may seem like a crazy way to do it, but the result is an easy-to-edit, easy-to-diff document that can be easily maintained (_and_ viewed) in GitHub by a wide variety of people.
+To be more precise, I mean: starting from _exactly_ the same input (a set of markdown documents), can I get the same PDF out? That can't possibly be a hard problem, can it?
 
-[pandoc]: https://pandoc.org/
-[pandoc-crossref]: https://github.com/lierdakil/pandoc-crossref
+Short answer: _**it's a lot harder than I thought**_ (and metadata is to blame).
 
-It also feels (maybe this is just my own bias) more reliable converting from markdown to other document formats, so when a client asks for, say,  a Word document to send for translation, we can easily do the conversion and expect that everything will render properly.
+## Our Pipeline
 
-## The Problem
+We generate our book PDF from a set of markdown source files using [pandoc](https://pandoc.org/). It's academic writing, so there's a mix of filters in there: LaTeX for equations, [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref) for intra-document references, and Citeproc (BibTeX) for citations and references. It's also multilingual, so we throw [Xetex](https://tug.org/xetex/) into the mix to handle Unicode. It may seem like a crazy way to do it, but the result is an easy-to-edit, easy-to-diff document that can be easily maintained (_and_ viewed) in GitHub by a wide variety of people (even those for whom LaTeX isn't their first language).
 
-I can't generate the same PDF twice.
+The result is shockingly easy to convert to other document formats, so when a client asks for, say, a Word document to send for translation, we can easily do the conversion and expect that everything will render properly.
 
-``` bash
+## Our Problem
+
+I couldn't seem to generate the same PDF twice. Witness here:
+```bash
 >>> make clean && make && md5 document.pdf
 MD5 (document.pdf) = fdfeefe8eb0df92162342271ad4cacc2
 >>> make clean && make && md5 document.pdf
 MD5 (document.pdf) = 90360b00c4f1ef08e57135e6b866e392
 ```
+Basically, every time the PDF is generated, the hash is different. That's a little embarrassing for a guy who does reproducibility research. I need to fix this in our generation pipeline.
 
-Basically, every time the PDF is generated, the hash is different. That's a little embarrassing for a guy who does reproducibility research. I need to fix that.
-
-Now, there's no guarantee the PDF is the culprit, so before digging in that grave, I should check the generation upstream:
-
+Pro-tip number 1: **make sure you're solving the right problem**. There's no guarantee the PDF is the culprit, so before digging in that grave, I should check the generation upstream. Is the source material actually unchanging?
 ```bash
 >>> make clean && make document.tex && cp document.tex orig.tex
 >>> make clean && make document.tex && cp document.tex next.tex
 >>> diff orig.txt next.txt
+(nothing)
 ```
-No output, so the generated $\TeX$ is the same. A good start.
 
-Next, check the file sizes:
+As I hoped: no output, so the generated TEX is the same. A good start.
+
+Next, let's figure out how different these files actually are, starting with my favourite hash function: file size.
 
 ```bash
 >>> make clean && make && mv document.pdf orig.pdf
 >>> make clean && make && mv document.pdf next.pdf
 >>> ls -la *.pdf
--rw-r--r--  1 kjell  staff  6709688 19 Jul 15:35 next.pdf
--rw-r--r--  1 kjell  staff  6709688 19 Jul 15:34 orig.pdf
+-rw-r--r--  1 hackalog  staff  6709688 19 Jul 15:35 next.pdf
+-rw-r--r--  1 hackalog  staff  6709688 19 Jul 15:34 orig.pdf
 ```
-Okay, so there's a good chance the bulk of those files are identical.
-Since the upstream contents are the same, I assume it's some kind of metadata difference.
+
+Since the upstream contents are the same, and the resulting PDFs are the same size, I'm going to assume the bulk of the files are identical and look for some kind of metadata difference.
 
 ## The Fix
 
-It's metadata. [Stackoverflow confirms][tfa] that these three fields are to blame:
+Lo and behold, it's metadata. Google and [Stackoverflow confirm](https://tex.stackexchange.com/questions/229605/reproducible-latex-builds-compile-to-a-file-which-always-hashes-to-the-same-va) that these three fields are to blame:
 
-+ `/CreationDate`
-+ `/ModDate`
-+ `/ID`
+-   `/CreationDate`
+-   `/ModDate`
+-   `/ID`
 
-[tfa]: https://tex.stackexchange.com/questions/229605/reproducible-latex-builds-compile-to-a-file-which-always-hashes-to-the-same-va
+By reading the article, it seems that two of these are easy to fix, by hard-coding something reasonable into a `SOURCE_DATE_EPOCH` environment variable before running `pandoc`. (like the suggested output of `date +%s`). I can generate a fixed date, set the variable, and give it a try.
 
-Two of these are easy to fix, by hard-coding something reasonable into the `SOURCE_DATE_EPOCH` environment variable before running `pandoc`. (like the suggested output of `date +%s`). According to [exiftool], the creation and modification dates now match. I can add that to the `Makefile`. Unfortunately, that's not enough.
+Sure enough, according to [exiftool](https://exiftool.org/), the creation and modification dates now match. Unfortunately, the hashes _still_ don't match.
 
- Annoyingly, `exiftool` doesn't let me view the `ID` field. Time to get dirty. (I'm actually impressed I made it this far without a [hex dump][xxd]).
-
-[xxd]: https://github.com/vim/vim/blob/master/src/xxd/xxd.c
-
-```bash
+What about that third one? ID? Annoyingly, [exiftool](https://exiftool.org/) doesn't let me view the `ID` field directly. Time to get dirty. (I'm actually impressed I made it this far without a [hex dump](https://github.com/vim/vim/blob/master/src/xxd/xxd.c)).
+```
 >>> diff <(xxd document-1.pdf) <(xxd document.pdf)
 418936,418940c418936,418940
 < 00664770: 662f 4944 5b3c 3935 3361 3763 3266 6531  f/ID[<953a7c2fe1
@@ -89,9 +87,8 @@ Two of these are easy to fix, by hard-coding something reasonable into the `SOUR
 > 006647b0: 6539 6363 3734 3434 3e5d 2f52 6f6f 740a  e9cc7444>]/Root.
 ```
 
-As I feared, the ID changes every time. According to the [aforementioned stackoverflow answer][tfa], there is a solution, but it depends on which PDF backend is compiling the $\LaTeX$. I suppose I can patch the [eisvogel.tex] template I'm using to generate the book, and add something to the $\TeX$ header. Technically, I only use [xetex], but so I don't have to look it up again, I'll put it all in:
-
-```TeX
+There it is, and sure enough, the ID changes every time. According to the [aforelinked stackoverflow article](https://tex.stackexchange.com/questions/229605/reproducible-latex-builds-compile-to-a-file-which-always-hashes-to-the-same-va), there is a solution, but it depends on which PDF backend is compiling the actual compiling for pandoc. I suppose I can patch the [eisvogel.tex](https://github.com/Wandmalfarbe/pandoc-latex-template) template I'm using to generate the book, and add a blurb the TeX header. Technically, I only use Xetex, but so I don't have to look it up again, I'll put it **all** in and cross my fingers if I ever need a different backend:
+```tex
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftexe
   \pdfinfoomitdate=1
   \pdftrailerid{}
@@ -108,20 +105,16 @@ As I feared, the ID changes every time. According to the [aforementioned stackov
 \fi
 ```
 
-And voila, my PDF generation is reproducible.
+## The Result
+
+A few fistfuls of hair, a few hours, a hex dump, and much googling later, and...
 
 ```bash
->>> make clean && make && mv document.pdf orig.pdf
->>> make clean && make && mv document.pdf next.pdf
->>> md5 *.pdf
-MD5 (next.pdf) = c3bf99530a35eab6f9adafb08c24acbd
-MD5 (orig.pdf) = c3bf99530a35eab6f9adafb08c24acbd
+>>> make `clean` && make && mv `document.pdf orig.pdf`
+>>> make `clean` && make && mv `document.pdf next.pdf`
+>>> `md5 *.pdf MD5`
+(`next.pdf`) = `c3bf99530a35eab6f9adafb08c24acbd MD5`
+(`orig.pdf`) = `c3bf99530a35eab6f9adafb08c24acbd`
 ```
 
-That wasn't so hard, was it?
-
-(yikes).
-
-[exiftool]: https://exiftool.org/
-[xetex]: https://tug.org/xetex/
-[eisvogel.tex]: https://github.com/Wandmalfarbe/pandoc-latex-template
+At last my PDF generation is reproducible. That wasn't so hard, was it?
